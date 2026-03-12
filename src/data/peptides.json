@@ -1,0 +1,1018 @@
+[
+  {
+    "cat": "M10",
+    "name": "HGH 191AA (Somatropin)",
+    "size": "10 IU",
+    "boxPrice": 45,
+    "category": "Growth Hormone",
+    "desc": "Synthetic human growth hormone that supports muscle growth, fat metabolism, bone density, and cellular repair. Widely used for anti-aging and body composition."
+  },
+  {
+    "cat": "M12",
+    "name": "HGH 191AA (Somatropin)",
+    "size": "12 IU",
+    "boxPrice": 60,
+    "category": "Growth Hormone",
+    "desc": "Synthetic human growth hormone that supports muscle growth, fat metabolism, bone density, and cellular repair. Widely used for anti-aging and body composition."
+  },
+  {
+    "cat": "M15",
+    "name": "HGH 191AA (Somatropin)",
+    "size": "15 IU",
+    "boxPrice": 70,
+    "category": "Growth Hormone",
+    "desc": "Synthetic human growth hormone that supports muscle growth, fat metabolism, bone density, and cellular repair. Widely used for anti-aging and body composition."
+  },
+  {
+    "cat": "M24",
+    "name": "HGH 191AA (Somatropin)",
+    "size": "24 IU",
+    "boxPrice": 125,
+    "category": "Growth Hormone",
+    "desc": "Synthetic human growth hormone that supports muscle growth, fat metabolism, bone density, and cellular repair. Widely used for anti-aging and body composition."
+  },
+  {
+    "cat": "M36",
+    "name": "HGH 191AA (Somatropin)",
+    "size": "36 IU",
+    "boxPrice": 180,
+    "category": "Growth Hormone",
+    "desc": "Synthetic human growth hormone that supports muscle growth, fat metabolism, bone density, and cellular repair. Widely used for anti-aging and body composition."
+  },
+  {
+    "cat": "SM5",
+    "name": "Semaglutide",
+    "size": "5 mg",
+    "boxPrice": 38,
+    "category": "GLP-1 / Weight Management",
+    "desc": "GLP-1 receptor agonist used for weight management and blood sugar regulation. Reduces appetite and slows gastric emptying to promote significant weight loss."
+  },
+  {
+    "cat": "SM10",
+    "name": "Semaglutide",
+    "size": "10 mg",
+    "boxPrice": 60,
+    "category": "GLP-1 / Weight Management",
+    "desc": "GLP-1 receptor agonist used for weight management and blood sugar regulation. Reduces appetite and slows gastric emptying to promote significant weight loss."
+  },
+  {
+    "cat": "SM15",
+    "name": "Semaglutide",
+    "size": "15 mg",
+    "boxPrice": 70,
+    "category": "GLP-1 / Weight Management",
+    "desc": "GLP-1 receptor agonist used for weight management and blood sugar regulation. Reduces appetite and slows gastric emptying to promote significant weight loss."
+  },
+  {
+    "cat": "SM20",
+    "name": "Semaglutide",
+    "size": "20 mg",
+    "boxPrice": 85,
+    "category": "GLP-1 / Weight Management",
+    "desc": "GLP-1 receptor agonist used for weight management and blood sugar regulation. Reduces appetite and slows gastric emptying to promote significant weight loss."
+  },
+  {
+    "cat": "SM30",
+    "name": "Semaglutide",
+    "size": "30 mg",
+    "boxPrice": 100,
+    "category": "GLP-1 / Weight Management",
+    "desc": "GLP-1 receptor agonist used for weight management and blood sugar regulation. Reduces appetite and slows gastric emptying to promote significant weight loss."
+  },
+  {
+    "cat": "TR5",
+    "name": "Tirzepatide",
+    "size": "5 mg",
+    "boxPrice": 40,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR10",
+    "name": "Tirzepatide",
+    "size": "10 mg",
+    "boxPrice": 60,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR15",
+    "name": "Tirzepatide",
+    "size": "15 mg",
+    "boxPrice": 75,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR20",
+    "name": "Tirzepatide",
+    "size": "20 mg",
+    "boxPrice": 90,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR30",
+    "name": "Tirzepatide",
+    "size": "30 mg",
+    "boxPrice": 108,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR40",
+    "name": "Tirzepatide",
+    "size": "40 mg",
+    "boxPrice": 135,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR50",
+    "name": "Tirzepatide",
+    "size": "50 mg",
+    "boxPrice": 162,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR60",
+    "name": "Tirzepatide",
+    "size": "60 mg",
+    "boxPrice": 175,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR70",
+    "name": "Tirzepatide",
+    "size": "70 mg",
+    "boxPrice": 195,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR80",
+    "name": "Tirzepatide",
+    "size": "80 mg",
+    "boxPrice": 220,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR90",
+    "name": "Tirzepatide",
+    "size": "90 mg",
+    "boxPrice": 244,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR100",
+    "name": "Tirzepatide",
+    "size": "100 mg",
+    "boxPrice": 265,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "TR120",
+    "name": "Tirzepatide",
+    "size": "120 mg",
+    "boxPrice": 295,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GIP/GLP-1 receptor agonist for weight management and metabolic health. Targets two incretin pathways for enhanced appetite control and blood sugar regulation."
+  },
+  {
+    "cat": "RT5",
+    "name": "Retatrutide",
+    "size": "5 mg",
+    "boxPrice": 69,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT10",
+    "name": "Retatrutide",
+    "size": "10 mg",
+    "boxPrice": 100,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT15",
+    "name": "Retatrutide",
+    "size": "15 mg",
+    "boxPrice": 112,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT20",
+    "name": "Retatrutide",
+    "size": "20 mg",
+    "boxPrice": 125,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT30",
+    "name": "Retatrutide",
+    "size": "30 mg",
+    "boxPrice": 195,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT40",
+    "name": "Retatrutide",
+    "size": "40 mg",
+    "boxPrice": 230,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT50",
+    "name": "Retatrutide",
+    "size": "50 mg",
+    "boxPrice": 275,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "RT60",
+    "name": "Retatrutide",
+    "size": "60 mg",
+    "boxPrice": 330,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Triple-agonist peptide targeting GLP-1, GIP, and glucagon receptors. Represents the next generation of weight management compounds with multi-pathway metabolic benefits."
+  },
+  {
+    "cat": "CGL5",
+    "name": "Cagrilintide",
+    "size": "5 mg",
+    "boxPrice": 105,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Long-acting amylin analog that reduces appetite and food intake. Works by enhancing satiety signals in the brain for sustained weight management."
+  },
+  {
+    "cat": "CGL10",
+    "name": "Cagrilintide",
+    "size": "10 mg",
+    "boxPrice": 200,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Long-acting amylin analog that reduces appetite and food intake. Works by enhancing satiety signals in the brain for sustained weight management."
+  },
+  {
+    "cat": "MDT10",
+    "name": "Mazdutide",
+    "size": "10 mg",
+    "boxPrice": 210,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual GLP-1/glucagon receptor agonist designed for obesity and metabolic disease management. Promotes weight loss while improving lipid profiles."
+  },
+  {
+    "cat": "SUR10",
+    "name": "Survodutide",
+    "size": "10 mg",
+    "boxPrice": 310,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Dual glucagon/GLP-1 receptor agonist being studied for weight management and liver health. Targets metabolic pathways to reduce body fat and improve liver function."
+  },
+  {
+    "cat": "CS10",
+    "name": "Cagrilintide 5mg + Semaglutide 5mg",
+    "size": "10 mg total",
+    "boxPrice": 165,
+    "category": "GLP-1 / Weight Management",
+    "desc": "Combination of amylin analog and GLP-1 agonist for enhanced weight management. Dual-pathway approach targeting both appetite reduction and metabolic regulation."
+  },
+  {
+    "cat": "BBG70",
+    "name": "BBG70 (GLOW Blend)",
+    "size": "70 mg",
+    "boxPrice": 200,
+    "category": "Blend / Combo",
+    "desc": "Multi-peptide blend containing TB-500 10mg, BPC-157 10mg, and GHK-Cu 50mg. Designed for tissue repair, skin rejuvenation, and accelerated recovery."
+  },
+  {
+    "cat": "KLOW",
+    "name": "KLOW Blend",
+    "size": "80 mg",
+    "boxPrice": 240,
+    "category": "Blend / Combo",
+    "desc": "Advanced blend of TB-500 10mg, BPC-157 10mg, GHK-Cu 50mg, and KPV 10mg. Combines healing, anti-inflammatory, and skin-repair peptides."
+  },
+  {
+    "cat": "BT2",
+    "name": "TB-500 (Thymosin Beta-4 Acetate)",
+    "size": "2 mg",
+    "boxPrice": 45,
+    "category": "Healing & Recovery",
+    "desc": "Naturally occurring peptide that promotes wound healing, tissue repair, and reduces inflammation. Supports recovery from muscle, tendon, and ligament injuries."
+  },
+  {
+    "cat": "BT5",
+    "name": "TB-500 (Thymosin Beta-4 Acetate)",
+    "size": "5 mg",
+    "boxPrice": 80,
+    "category": "Healing & Recovery",
+    "desc": "Naturally occurring peptide that promotes wound healing, tissue repair, and reduces inflammation. Supports recovery from muscle, tendon, and ligament injuries."
+  },
+  {
+    "cat": "BT10",
+    "name": "TB-500 (Thymosin Beta-4 Acetate)",
+    "size": "10 mg",
+    "boxPrice": 160,
+    "category": "Healing & Recovery",
+    "desc": "Naturally occurring peptide that promotes wound healing, tissue repair, and reduces inflammation. Supports recovery from muscle, tendon, and ligament injuries."
+  },
+  {
+    "cat": "BC5",
+    "name": "BPC-157",
+    "size": "5 mg",
+    "boxPrice": 40,
+    "category": "Healing & Recovery",
+    "desc": "Body Protection Compound derived from gastric juice. Accelerates healing of muscles, tendons, ligaments, and gut lining. Known for potent tissue-repair properties."
+  },
+  {
+    "cat": "BC10",
+    "name": "BPC-157",
+    "size": "10 mg",
+    "boxPrice": 68,
+    "category": "Healing & Recovery",
+    "desc": "Body Protection Compound derived from gastric juice. Accelerates healing of muscles, tendons, ligaments, and gut lining. Known for potent tissue-repair properties."
+  },
+  {
+    "cat": "BB10",
+    "name": "BPC 5mg + TB 5mg",
+    "size": "10 mg total",
+    "boxPrice": 105,
+    "category": "Healing & Recovery",
+    "desc": "Synergistic combination of BPC-157 and TB-500 for comprehensive tissue repair. Combines gut healing and systemic recovery in one vial."
+  },
+  {
+    "cat": "BB20",
+    "name": "BPC 10mg + TB 10mg",
+    "size": "20 mg total",
+    "boxPrice": 210,
+    "category": "Healing & Recovery",
+    "desc": "High-dose synergistic combination of BPC-157 and TB-500 for comprehensive tissue repair. Combines gut healing and systemic recovery in one vial."
+  },
+  {
+    "cat": "FM2",
+    "name": "MGF (Mechano Growth Factor)",
+    "size": "2 mg",
+    "boxPrice": 50,
+    "category": "Growth & Repair",
+    "desc": "Splice variant of IGF-1 released in response to muscle damage. Activates satellite cells to support muscle repair and growth after exercise."
+  },
+  {
+    "cat": "FMP2",
+    "name": "PEG-MGF",
+    "size": "2 mg",
+    "boxPrice": 90,
+    "category": "Growth & Repair",
+    "desc": "PEGylated version of MGF with extended half-life. Provides prolonged muscle repair signaling and enhanced recovery from exercise-induced damage."
+  },
+  {
+    "cat": "SMO5",
+    "name": "Sermorelin Acetate",
+    "size": "5 mg",
+    "boxPrice": 70,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Growth hormone-releasing hormone analog that stimulates the pituitary to produce natural HGH. Supports anti-aging, sleep quality, and body composition."
+  },
+  {
+    "cat": "SMO10",
+    "name": "Sermorelin Acetate",
+    "size": "10 mg",
+    "boxPrice": 150,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Growth hormone-releasing hormone analog that stimulates the pituitary to produce natural HGH. Supports anti-aging, sleep quality, and body composition."
+  },
+  {
+    "cat": "G10K",
+    "name": "HCG",
+    "size": "10,000 IU",
+    "boxPrice": 145,
+    "category": "Hormonal Support",
+    "desc": "Human chorionic gonadotropin used to support testosterone production, fertility, and hormonal balance during hormone therapy protocols."
+  },
+  {
+    "cat": "G5K",
+    "name": "HCG",
+    "size": "5,000 IU",
+    "boxPrice": 77,
+    "category": "Hormonal Support",
+    "desc": "Human chorionic gonadotropin used to support testosterone production, fertility, and hormonal balance during hormone therapy protocols."
+  },
+  {
+    "cat": "2AD",
+    "name": "AOD-9604",
+    "size": "2 mg",
+    "boxPrice": 50,
+    "category": "Fat Loss",
+    "desc": "Modified fragment of human growth hormone (HGH 176-191) that targets fat metabolism without affecting blood sugar or growth. Promotes fat burning."
+  },
+  {
+    "cat": "5AD",
+    "name": "AOD-9604",
+    "size": "5 mg",
+    "boxPrice": 90,
+    "category": "Fat Loss",
+    "desc": "Modified fragment of human growth hormone (HGH 176-191) that targets fat metabolism without affecting blood sugar or growth. Promotes fat burning."
+  },
+  {
+    "cat": "IG01",
+    "name": "IGF-1 LR3",
+    "size": "0.1 mg",
+    "boxPrice": 40,
+    "category": "Growth & Repair",
+    "desc": "Long-acting insulin-like growth factor with extended half-life. Promotes muscle growth, fat loss, and cellular repair throughout the body."
+  },
+  {
+    "cat": "IG1",
+    "name": "IGF-1 LR3",
+    "size": "1 mg",
+    "boxPrice": 220,
+    "category": "Growth & Repair",
+    "desc": "Long-acting insulin-like growth factor with extended half-life. Promotes muscle growth, fat loss, and cellular repair throughout the body."
+  },
+  {
+    "cat": "TSM2",
+    "name": "Tesamorelin",
+    "size": "2 mg",
+    "boxPrice": 50,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "GHRH analog that stimulates natural growth hormone release. FDA-approved for reducing visceral abdominal fat and improving body composition."
+  },
+  {
+    "cat": "TSM5",
+    "name": "Tesamorelin",
+    "size": "5 mg",
+    "boxPrice": 100,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "GHRH analog that stimulates natural growth hormone release. FDA-approved for reducing visceral abdominal fat and improving body composition."
+  },
+  {
+    "cat": "TSM10",
+    "name": "Tesamorelin",
+    "size": "10 mg",
+    "boxPrice": 190,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "GHRH analog that stimulates natural growth hormone release. FDA-approved for reducing visceral abdominal fat and improving body composition."
+  },
+  {
+    "cat": "TSM20",
+    "name": "Tesamorelin",
+    "size": "20 mg",
+    "boxPrice": 357,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "GHRH analog that stimulates natural growth hormone release. FDA-approved for reducing visceral abdominal fat and improving body composition."
+  },
+  {
+    "cat": "IP5",
+    "name": "Ipamorelin",
+    "size": "5 mg",
+    "boxPrice": 40,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Selective growth hormone secretagogue that stimulates GH release without significantly affecting cortisol or prolactin. Gentle and well-tolerated."
+  },
+  {
+    "cat": "IP10",
+    "name": "Ipamorelin",
+    "size": "10 mg",
+    "boxPrice": 70,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Selective growth hormone secretagogue that stimulates GH release without significantly affecting cortisol or prolactin. Gentle and well-tolerated."
+  },
+  {
+    "cat": "HX5",
+    "name": "Hexarelin Acetate",
+    "size": "5 mg",
+    "boxPrice": 95,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Potent growth hormone secretagogue and ghrelin receptor agonist. Stimulates significant GH release and may support cardiac tissue health."
+  },
+  {
+    "cat": "CU50",
+    "name": "GHK-Cu",
+    "size": "50 mg",
+    "boxPrice": 27,
+    "category": "Skin & Anti-Aging",
+    "desc": "Copper peptide complex that promotes collagen production, skin remodeling, and wound healing. Popular in anti-aging protocols for skin tightening and hair growth."
+  },
+  {
+    "cat": "CU100",
+    "name": "GHK-Cu",
+    "size": "100 mg",
+    "boxPrice": 55,
+    "category": "Skin & Anti-Aging",
+    "desc": "Copper peptide complex that promotes collagen production, skin remodeling, and wound healing. Popular in anti-aging protocols for skin tightening and hair growth."
+  },
+  {
+    "cat": "KS5",
+    "name": "KissPeptin-10",
+    "size": "5 mg",
+    "boxPrice": 63,
+    "category": "Hormonal Support",
+    "desc": "Neuropeptide that plays a central role in regulating reproductive hormones. Stimulates GnRH release to support testosterone and fertility in both sexes."
+  },
+  {
+    "cat": "KS10",
+    "name": "KissPeptin-10",
+    "size": "10 mg",
+    "boxPrice": 116,
+    "category": "Hormonal Support",
+    "desc": "Neuropeptide that plays a central role in regulating reproductive hormones. Stimulates GnRH release to support testosterone and fertility in both sexes."
+  },
+  {
+    "cat": "TY10",
+    "name": "Thymalin",
+    "size": "10 mg",
+    "boxPrice": 60,
+    "category": "Immune Support",
+    "desc": "Thymic peptide that modulates immune function by supporting T-cell maturation. Used to strengthen immune response and support healthy aging."
+  },
+  {
+    "cat": "MS10",
+    "name": "MOTS-c",
+    "size": "10 mg",
+    "boxPrice": 66,
+    "category": "Metabolic Health",
+    "desc": "Mitochondrial-derived peptide that regulates metabolic homeostasis. Enhances exercise capacity, improves insulin sensitivity, and supports cellular energy production."
+  },
+  {
+    "cat": "MS40",
+    "name": "MOTS-c",
+    "size": "40 mg",
+    "boxPrice": 205,
+    "category": "Metabolic Health",
+    "desc": "Mitochondrial-derived peptide that regulates metabolic homeostasis. Enhances exercise capacity, improves insulin sensitivity, and supports cellular energy production."
+  },
+  {
+    "cat": "F410",
+    "name": "FOXO4-DRI",
+    "size": "10 mg",
+    "boxPrice": 350,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Senolytic peptide that selectively targets and clears senescent (aging) cells. Promotes tissue rejuvenation by removing damaged cells that drive age-related decline."
+  },
+  {
+    "cat": "375",
+    "name": "LL-37",
+    "size": "5 mg",
+    "boxPrice": 100,
+    "category": "Immune Support",
+    "desc": "Antimicrobial peptide from the cathelicidin family. Part of the innate immune system, it fights bacteria, viruses, and fungi while modulating inflammation."
+  },
+  {
+    "cat": "MT10",
+    "name": "Melatonin",
+    "size": "10 mg",
+    "boxPrice": 61,
+    "category": "Sleep & Recovery",
+    "desc": "Hormone that regulates circadian rhythm and sleep-wake cycles. Also acts as a powerful antioxidant supporting immune function and cellular repair during rest."
+  },
+  {
+    "cat": "DR5",
+    "name": "Dermorphin",
+    "size": "5 mg",
+    "boxPrice": 35,
+    "category": "Research",
+    "desc": "Potent opioid peptide originally found in frog skin. Studied for its strong analgesic (pain-relieving) properties — for research purposes."
+  },
+  {
+    "cat": "GTT600",
+    "name": "Glutathione",
+    "size": "600 mg",
+    "boxPrice": 40,
+    "category": "Antioxidant / Detox",
+    "desc": "Master antioxidant that protects cells from oxidative stress and supports detoxification. Essential for immune function, skin health, and liver support."
+  },
+  {
+    "cat": "GTT",
+    "name": "Glutathione",
+    "size": "1,500 mg",
+    "boxPrice": 80,
+    "category": "Antioxidant / Detox",
+    "desc": "High-dose master antioxidant for enhanced detoxification, immune support, and cellular protection against oxidative damage."
+  },
+  {
+    "cat": "WA2",
+    "name": "Bacteriostatic Water",
+    "size": "2 ml",
+    "boxPrice": 7,
+    "category": "Supplies",
+    "desc": "Sterile water with 0.9% benzyl alcohol for reconstituting peptides. Essential supply for safe preparation and administration."
+  },
+  {
+    "cat": "WA3",
+    "name": "Bacteriostatic Water",
+    "size": "3 ml",
+    "boxPrice": 8,
+    "category": "Supplies",
+    "desc": "Sterile water with 0.9% benzyl alcohol for reconstituting peptides. Essential supply for safe preparation and administration."
+  },
+  {
+    "cat": "WA10",
+    "name": "Bacteriostatic Water",
+    "size": "10 ml",
+    "boxPrice": 10,
+    "category": "Supplies",
+    "desc": "Sterile water with 0.9% benzyl alcohol for reconstituting peptides. Essential supply for safe preparation and administration."
+  },
+  {
+    "cat": "AA10",
+    "name": "Acetic Acid 0.6%",
+    "size": "10 ml",
+    "boxPrice": 11,
+    "category": "Supplies",
+    "desc": "Dilute acetic acid solution used for reconstituting certain peptides that require acidic solvent for proper dissolution."
+  },
+  {
+    "cat": "5AM",
+    "name": "5-Amino-1MQ",
+    "size": "5 mg",
+    "boxPrice": 75,
+    "category": "Fat Loss",
+    "desc": "Small molecule NNMT inhibitor that boosts cellular energy expenditure and fat metabolism. Promotes fat loss by increasing NAD+ levels in fat cells."
+  },
+  {
+    "cat": "AM50",
+    "name": "AM50",
+    "size": "50 mg",
+    "boxPrice": 136,
+    "category": "Research",
+    "desc": "Research peptide. Consult with provider for specific application details and protocols."
+  },
+  {
+    "cat": "G75",
+    "name": "HMG (Human Menopausal Gonadotropin)",
+    "size": "75 IU",
+    "boxPrice": 58,
+    "category": "Hormonal Support",
+    "desc": "Contains FSH and LH to stimulate gonadal function. Used in fertility protocols and to support natural hormone production during therapy."
+  },
+  {
+    "cat": "CBL60",
+    "name": "Cerebrolysin",
+    "size": "60 mg (6 vials)",
+    "boxPrice": 48,
+    "category": "Cognitive / Neuro",
+    "desc": "Neuropeptide preparation that supports brain health, cognitive function, and neuroplasticity. Used for cognitive enhancement and neurological recovery."
+  },
+  {
+    "cat": "KP10",
+    "name": "KPV",
+    "size": "10 mg",
+    "boxPrice": 65,
+    "category": "Anti-Inflammatory",
+    "desc": "Anti-inflammatory tripeptide derived from alpha-MSH. Reduces gut inflammation and supports mucosal healing — popular for digestive health protocols."
+  },
+  {
+    "cat": "NP810",
+    "name": "SNAP-8",
+    "size": "10 mg",
+    "boxPrice": 42,
+    "category": "Skin & Anti-Aging",
+    "desc": "Neuropeptide that relaxes facial muscles to reduce the appearance of wrinkles. Non-invasive alternative to neurotoxin injections for smoother skin."
+  },
+  {
+    "cat": "NJ100",
+    "name": "NAD+",
+    "size": "100 mg",
+    "boxPrice": 45,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Essential coenzyme involved in cellular energy production and DNA repair. Supplementation supports anti-aging, cognitive function, and metabolic health."
+  },
+  {
+    "cat": "NJ500",
+    "name": "NAD+",
+    "size": "500 mg",
+    "boxPrice": 75,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Essential coenzyme involved in cellular energy production and DNA repair. Supplementation supports anti-aging, cognitive function, and metabolic health."
+  },
+  {
+    "cat": "NJ1000",
+    "name": "NAD+",
+    "size": "1,000 mg",
+    "boxPrice": 150,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Essential coenzyme involved in cellular energy production and DNA repair. Supplementation supports anti-aging, cognitive function, and metabolic health."
+  },
+  {
+    "cat": "VP10",
+    "name": "VIP (Vasoactive Intestinal Peptide)",
+    "size": "10 mg",
+    "boxPrice": 150,
+    "category": "Immune Support",
+    "desc": "Neuropeptide with anti-inflammatory and immune-regulating properties. Supports respiratory health, gut function, and helps regulate circadian rhythm."
+  },
+  {
+    "cat": "LC216",
+    "name": "LC216 Lipo Blend",
+    "size": "10 ml",
+    "boxPrice": 75,
+    "category": "Fat Loss",
+    "desc": "Lipotropic blend containing L-Carnitine 200mg, Arginine 20mg, Methionine 25mg, Inositol 50mg, Choline 50mg, B5 Dexpan 25mg, B6 25mg, and B12 Methyl 1mg. Supports fat metabolism and energy."
+  },
+  {
+    "cat": "LC600",
+    "name": "L-Carnitine",
+    "size": "10 ml",
+    "boxPrice": 40,
+    "category": "Fat Loss",
+    "desc": "Amino acid that transports fatty acids into mitochondria for energy production. Supports fat burning, exercise performance, and cardiovascular health."
+  },
+  {
+    "cat": "LB",
+    "name": "Lemon Bottle",
+    "size": "10 ml",
+    "boxPrice": 80,
+    "category": "Fat Loss",
+    "desc": "Fat-dissolving solution used for targeted fat reduction in aesthetic treatments. Contains a blend of compounds designed to break down localized fat deposits."
+  },
+  {
+    "cat": "B1210",
+    "name": "B12",
+    "size": "10 ml",
+    "boxPrice": 25,
+    "category": "Vitamins",
+    "desc": "Essential vitamin for energy production, nerve function, and red blood cell formation. Injectable B12 provides superior absorption compared to oral supplements."
+  },
+  {
+    "cat": "B12",
+    "name": "B12",
+    "size": "2 ml",
+    "boxPrice": 10,
+    "category": "Vitamins",
+    "desc": "Essential vitamin for energy production, nerve function, and red blood cell formation. Injectable B12 provides superior absorption compared to oral supplements."
+  },
+  {
+    "cat": "SLU5",
+    "name": "Slupp 332",
+    "size": "5 mg",
+    "boxPrice": 100,
+    "category": "Research",
+    "desc": "Research compound. Consult with provider for specific application details and protocols."
+  },
+  {
+    "cat": "SHB",
+    "name": "Super Human Blend",
+    "size": "10 ml",
+    "boxPrice": 85,
+    "category": "Blend / Combo",
+    "desc": "Comprehensive amino acid blend containing L-Arginine 110mg, L-Ornithin 110mg, L-Citruline 120mg, L-Lysine 70mg, L-Glutamine 40mg, L-Prolin 60mg, L-Taurine 60mg, L-Carnitine 220mg, and NAC 75mg. Supports performance, recovery, and detoxification."
+  },
+  {
+    "cat": "LC526",
+    "name": "LC526 Super Shred",
+    "size": "10 ml",
+    "boxPrice": 120,
+    "category": "Fat Loss",
+    "desc": "Advanced fat-burning blend with L-Carnitine 300mg, Methionine 25mg, Inositol 50mg, Choline 50mg, B12 1mg, B6 50mg, and NADH 50mg. Designed for enhanced fat metabolism and energy."
+  },
+  {
+    "cat": "MT1",
+    "name": "Melanotan 1 (Afamelanotide)",
+    "size": "10 mg",
+    "boxPrice": 65,
+    "category": "Tanning / Skin",
+    "desc": "Synthetic alpha-MSH analog that stimulates melanin production for skin darkening. Used for sunless tanning and studied for UV protection benefits."
+  },
+  {
+    "cat": "ML10",
+    "name": "Melanotan 2 (MT-2)",
+    "size": "10 mg",
+    "boxPrice": 47,
+    "category": "Tanning / Skin",
+    "desc": "Synthetic melanocortin peptide that increases skin pigmentation and may enhance libido. Provides sunless tanning effects by stimulating melanocytes."
+  },
+  {
+    "cat": "P41",
+    "name": "PT-141 (Bremelanotide)",
+    "size": "10 mg",
+    "boxPrice": 55,
+    "category": "Sexual Health",
+    "desc": "Melanocortin receptor agonist that works through the central nervous system to improve sexual desire and arousal in both men and women."
+  },
+  {
+    "cat": "DS5",
+    "name": "DSIP (Delta Sleep-Inducing Peptide)",
+    "size": "5 mg",
+    "boxPrice": 42,
+    "category": "Sleep & Recovery",
+    "desc": "Neuropeptide that promotes deep, restorative delta-wave sleep. Supports natural sleep patterns, stress reduction, and overnight recovery."
+  },
+  {
+    "cat": "DS10",
+    "name": "DSIP (Delta Sleep-Inducing Peptide)",
+    "size": "10 mg",
+    "boxPrice": 90,
+    "category": "Sleep & Recovery",
+    "desc": "Neuropeptide that promotes deep, restorative delta-wave sleep. Supports natural sleep patterns, stress reduction, and overnight recovery."
+  },
+  {
+    "cat": "DS15",
+    "name": "DSIP (Delta Sleep-Inducing Peptide)",
+    "size": "15 mg",
+    "boxPrice": 114,
+    "category": "Sleep & Recovery",
+    "desc": "Neuropeptide that promotes deep, restorative delta-wave sleep. Supports natural sleep patterns, stress reduction, and overnight recovery."
+  },
+  {
+    "cat": "SK5",
+    "name": "Selank",
+    "size": "5 mg",
+    "boxPrice": 40,
+    "category": "Cognitive / Neuro",
+    "desc": "Synthetic peptide derived from tuftsin with anxiolytic and nootropic effects. Reduces anxiety, enhances focus and memory without sedation or dependency."
+  },
+  {
+    "cat": "SK10",
+    "name": "Selank",
+    "size": "10 mg",
+    "boxPrice": 65,
+    "category": "Cognitive / Neuro",
+    "desc": "Synthetic peptide derived from tuftsin with anxiolytic and nootropic effects. Reduces anxiety, enhances focus and memory without sedation or dependency."
+  },
+  {
+    "cat": "OT2",
+    "name": "Oxytocin Acetate",
+    "size": "2 mg",
+    "boxPrice": 40,
+    "category": "Hormonal Support",
+    "desc": "Known as the 'bonding hormone,' oxytocin supports social connection, stress reduction, and emotional well-being. Also studied for wound healing benefits."
+  },
+  {
+    "cat": "OT5",
+    "name": "Oxytocin Acetate",
+    "size": "5 mg",
+    "boxPrice": 60,
+    "category": "Hormonal Support",
+    "desc": "Known as the 'bonding hormone,' oxytocin supports social connection, stress reduction, and emotional well-being. Also studied for wound healing benefits."
+  },
+  {
+    "cat": "OT10",
+    "name": "Oxytocin Acetate",
+    "size": "10 mg",
+    "boxPrice": 125,
+    "category": "Hormonal Support",
+    "desc": "Known as the 'bonding hormone,' oxytocin supports social connection, stress reduction, and emotional well-being. Also studied for wound healing benefits."
+  },
+  {
+    "cat": "ET10",
+    "name": "Epithalon",
+    "size": "10 mg",
+    "boxPrice": 35,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Tetrapeptide that activates telomerase to lengthen telomeres — the protective caps on chromosomes. A key longevity peptide supporting cellular lifespan."
+  },
+  {
+    "cat": "ET50",
+    "name": "Epithalon",
+    "size": "50 mg",
+    "boxPrice": 150,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Tetrapeptide that activates telomerase to lengthen telomeres — the protective caps on chromosomes. A key longevity peptide supporting cellular lifespan."
+  },
+  {
+    "cat": "AP5",
+    "name": "Adipotide",
+    "size": "5 mg",
+    "boxPrice": 160,
+    "category": "Fat Loss",
+    "desc": "Experimental peptide that targets blood supply to white adipose (fat) tissue. Induces apoptosis in fat cells by cutting off their vascular support."
+  },
+  {
+    "cat": "AR50",
+    "name": "AICAR",
+    "size": "50 mg",
+    "boxPrice": 65,
+    "category": "Performance",
+    "desc": "AMPK activator that mimics the metabolic effects of exercise. Enhances endurance, fat oxidation, and cellular energy regulation without physical activity."
+  },
+  {
+    "cat": "GND2",
+    "name": "Gonadorelin Acetate",
+    "size": "2 mg",
+    "boxPrice": 40,
+    "category": "Hormonal Support",
+    "desc": "Synthetic GnRH that stimulates the pituitary to release LH and FSH. Used to maintain natural testosterone production during hormone therapy protocols."
+  },
+  {
+    "cat": "XA5",
+    "name": "Semax",
+    "size": "5 mg",
+    "boxPrice": 45,
+    "category": "Cognitive / Neuro",
+    "desc": "Synthetic peptide derived from ACTH with neuroprotective and cognitive-enhancing properties. Improves focus, memory, and mental clarity without stimulant side effects."
+  },
+  {
+    "cat": "XA10",
+    "name": "Semax",
+    "size": "10 mg",
+    "boxPrice": 70,
+    "category": "Cognitive / Neuro",
+    "desc": "Synthetic peptide derived from ACTH with neuroprotective and cognitive-enhancing properties. Improves focus, memory, and mental clarity without stimulant side effects."
+  },
+  {
+    "cat": "2S10",
+    "name": "SS-31 (Elamipretide)",
+    "size": "10 mg",
+    "boxPrice": 100,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Mitochondria-targeted peptide that restores cellular energy production and reduces oxidative stress. Supports heart, kidney, and skeletal muscle function."
+  },
+  {
+    "cat": "2S50",
+    "name": "SS-31 (Elamipretide)",
+    "size": "50 mg",
+    "boxPrice": 380,
+    "category": "Anti-Aging / Longevity",
+    "desc": "Mitochondria-targeted peptide that restores cellular energy production and reduces oxidative stress. Supports heart, kidney, and skeletal muscle function."
+  },
+  {
+    "cat": "G25",
+    "name": "GHRP-2 Acetate",
+    "size": "5 mg",
+    "boxPrice": 27,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Growth hormone releasing peptide that stimulates the pituitary gland. Increases GH secretion, appetite, and supports muscle gain and fat loss."
+  },
+  {
+    "cat": "G210",
+    "name": "GHRP-2 Acetate",
+    "size": "10 mg",
+    "boxPrice": 50,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Growth hormone releasing peptide that stimulates the pituitary gland. Increases GH secretion, appetite, and supports muscle gain and fat loss."
+  },
+  {
+    "cat": "G65",
+    "name": "GHRP-6 Acetate",
+    "size": "5 mg",
+    "boxPrice": 27,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Potent growth hormone secretagogue that also stimulates appetite. Increases GH release, supports lean mass gains, and promotes recovery."
+  },
+  {
+    "cat": "G610",
+    "name": "GHRP-6 Acetate",
+    "size": "10 mg",
+    "boxPrice": 50,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Potent growth hormone secretagogue that also stimulates appetite. Increases GH release, supports lean mass gains, and promotes recovery."
+  },
+  {
+    "cat": "CND2",
+    "name": "CJC-1295 Without DAC (Mod GRF 1-29)",
+    "size": "2 mg",
+    "boxPrice": 40,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Modified growth hormone releasing factor with short half-life. Produces pulsatile GH release mimicking natural patterns — often paired with GHRP peptides."
+  },
+  {
+    "cat": "CND5",
+    "name": "CJC-1295 Without DAC (Mod GRF 1-29)",
+    "size": "5 mg",
+    "boxPrice": 90,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Modified growth hormone releasing factor with short half-life. Produces pulsatile GH release mimicking natural patterns — often paired with GHRP peptides."
+  },
+  {
+    "cat": "CND10",
+    "name": "CJC-1295 Without DAC (Mod GRF 1-29)",
+    "size": "10 mg",
+    "boxPrice": 170,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Modified growth hormone releasing factor with short half-life. Produces pulsatile GH release mimicking natural patterns — often paired with GHRP peptides."
+  },
+  {
+    "cat": "CP10",
+    "name": "CJC-1295 (no DAC) 5mg + Ipamorelin 5mg",
+    "size": "10 mg total",
+    "boxPrice": 105,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Popular combination of GHRH and GHRP peptides for synergistic growth hormone release. Mimics natural GH pulsing for anti-aging, recovery, and body composition."
+  },
+  {
+    "cat": "CD2",
+    "name": "CJC-1295 With DAC",
+    "size": "2 mg",
+    "boxPrice": 75,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Long-acting GHRH analog with Drug Affinity Complex for extended half-life. Provides sustained GH elevation for days — ideal for fewer injection protocols."
+  },
+  {
+    "cat": "CD5",
+    "name": "CJC-1295 With DAC",
+    "size": "5 mg",
+    "boxPrice": 160,
+    "category": "Growth Hormone Secretagogue",
+    "desc": "Long-acting GHRH analog with Drug Affinity Complex for extended half-life. Provides sustained GH elevation for days — ideal for fewer injection protocols."
+  }
+]

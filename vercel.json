@@ -1,5 +1,3 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/Peptide_Catalog.html" }
-  ]
+  "framework": "nextjs"
 }

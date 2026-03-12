@@ -1,0 +1,96 @@
+.card {
+  background: var(--color-bg-secondary);
+  border: 1.5px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.compareSelected {
+  border-color: var(--color-accent);
+  border-width: 2px;
+  box-shadow: 0 0 0 3px rgba(212,186,153,0.2);
+}
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+.cardName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+.cardCat {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--color-accent-hover);
+  background: var(--color-accent-bg);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.cardDesc {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 0.75rem;
+}
+.cardTag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.75rem;
+  background: var(--color-accent-bg);
+  color: var(--color-accent-hover);
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-light);
+}
+.cardPrice {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-success);
+}
+.cardPriceLabel {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+.cardSize {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+.compareCheckbox {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.75rem;
+  z-index: 2;
+}
+.compareCheckbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+.compareCheckbox input[type="checkbox"]:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
