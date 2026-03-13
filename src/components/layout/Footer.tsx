@@ -7,7 +7,7 @@ export default function Footer() {
       <Image
         src="/images/logos/casa-5.png"
         alt="Casa Peptides"
-        width={100}
+        width={64}
         height={32}
         className={styles.footerLogo}
       />
