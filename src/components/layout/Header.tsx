@@ -16,7 +16,7 @@ export default function Header() {
           <Image
             src="/images/logos/casa-1.png"
             alt="Casa Peptides"
-            width={120}
+            width={88}
             height={44}
             className={`${styles.headerLogo} ${styles.headerLogoLight}`}
             priority
@@ -24,7 +24,7 @@ export default function Header() {
           <Image
             src="/images/logos/casa-3.png"
             alt="Casa Peptides"
-            width={120}
+            width={88}
             height={44}
             className={`${styles.headerLogo} ${styles.headerLogoDark}`}
             priority
