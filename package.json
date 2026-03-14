@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/TomsTools11/casa-peptides-catalog#readme",
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "^16.1.6",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

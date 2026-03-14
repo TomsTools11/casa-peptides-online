@@ -31,6 +31,10 @@ export default function Header() {
           />
           <span className={styles.headerSubtitle}>Product Catalog</span>
         </Link>
+        <nav className={styles.headerNav}>
+          <Link href="/catalog" className={styles.navLink}>Catalog</Link>
+          <Link href="/blog" className={styles.navLink}>Blog</Link>
+        </nav>
         <div className={styles.headerRight}>
           <div className={styles.headerStats}>
             <span>Total Products: <strong>{peptides.length}</strong></span>
