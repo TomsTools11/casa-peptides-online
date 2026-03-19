@@ -1,6 +1,7 @@
 'use client';
 
 import { productsByCategory } from '@/lib/products';
+import { categoryBySlug, productsByConsolidatedCategory } from '@/lib/categories';
 import { deslugifyCategory } from '@/lib/utils';
 import { useProductFilter } from '@/hooks/useProductFilter';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -10,8 +11,12 @@ import ProductTable from '@/components/catalog/ProductTable';
 import styles from './category.module.css';
 
 export default function CategoryClient({ categorySlug }: { categorySlug: string }) {
-  const categoryName = deslugifyCategory(categorySlug);
-  const catProducts = productsByCategory[categoryName] || [];
+  // Check consolidated category first, then fall back to original
+  const consolidated = categoryBySlug[categorySlug];
+  const categoryName = consolidated ? consolidated.name : deslugifyCategory(categorySlug);
+  const catProducts = consolidated
+    ? productsByConsolidatedCategory[categorySlug]
+    : productsByCategory[deslugifyCategory(categorySlug)] || [];
 
   const {
     filtered, searchTerm, setSearchTerm,
@@ -33,6 +38,7 @@ export default function CategoryClient({ categorySlug }: { categorySlug: string 
   return (
     <>
       <Breadcrumb items={[
+        { label: 'Home', href: '/' },
         { label: 'Catalog', href: '/catalog' },
         { label: categoryName },
       ]} />

@@ -24,12 +24,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Casa Peptides — Product Catalog',
-  description: 'Browse the complete Casa Peptides product catalog with 127 products across 22 categories.',
+  description: 'Browse the complete Casa Peptides product catalog — research-grade peptides, compounds, and supplies across 8 categories.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${redHatDisplay.variable} ${inter.variable}`}>
+    <html lang="en" className={`${redHatDisplay.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t){document.documentElement.setAttribute('data-theme',t)}else if(window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark')}}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body>
         <ThemeProvider>
           <CompareProvider>

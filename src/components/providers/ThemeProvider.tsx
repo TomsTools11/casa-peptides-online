@@ -22,12 +22,29 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(preferred);
     document.documentElement.setAttribute('data-theme', preferred);
     setMounted(true);
+
+    // Sync with OS theme changes when user has no manual preference
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        const next: Theme = e.matches ? 'dark' : 'light';
+        setTheme(next);
+        document.documentElement.setAttribute('data-theme', next);
+      }
+    };
+    mq.addEventListener('change', handleChange);
+    return () => mq.removeEventListener('change', handleChange);
   }, []);
 
   const toggleTheme = useCallback(() => {
     setTheme(prev => {
       const next = prev === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
+      const osPrefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (next === osPrefers) {
+        localStorage.removeItem('theme');
+      } else {
+        localStorage.setItem('theme', next);
+      }
       document.documentElement.setAttribute('data-theme', next);
       return next;
     });

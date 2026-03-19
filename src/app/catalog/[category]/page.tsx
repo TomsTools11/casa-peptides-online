@@ -1,10 +1,11 @@
 import { categories } from '@/lib/products';
+import { consolidatedCategories } from '@/lib/categories';
 import CategoryClient from './CategoryClient';
 
 export function generateStaticParams() {
-  return categories.map(cat => ({
-    category: cat,
-  }));
+  const originalParams = categories.map(cat => ({ category: cat }));
+  const consolidatedParams = consolidatedCategories.map(cat => ({ category: cat.slug }));
+  return [...originalParams, ...consolidatedParams];
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {

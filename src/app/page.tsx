@@ -1,5 +1,14 @@
-import { redirect } from 'next/navigation';
+import HomeHero from '@/components/home/HomeHero';
+import CategoryGrid from '@/components/home/CategoryGrid';
+import styles from './page.module.css';
 
 export default function Home() {
-  redirect('/catalog');
+  return (
+    <div className={styles.page}>
+      <HomeHero />
+      <div className={styles.grid}>
+        <CategoryGrid />
+      </div>
+    </div>
+  );
 }

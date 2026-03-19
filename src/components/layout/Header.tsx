@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.headerInner}>
-        <Link href="/catalog" className={styles.headerBrand}>
+        <Link href="/" className={styles.headerBrand}>
           <Image
             src="/images/logos/casa-1.png"
             alt="Casa Peptides"
@@ -32,7 +32,8 @@ export default function Header() {
           <span className={styles.headerSubtitle}>Product Catalog</span>
         </Link>
         <nav className={styles.headerNav}>
-          <Link href="/catalog" className={styles.navLink}>Catalog</Link>
+          <Link href="/" className={styles.navLink}>Home</Link>
+          <Link href="/catalog" className={styles.navLink}>Full Catalogue</Link>
           <Link href="/blog" className={styles.navLink}>Blog</Link>
         </nav>
         <div className={styles.headerRight}>
