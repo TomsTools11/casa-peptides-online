@@ -33,12 +33,6 @@ export default function Footer() {
           <span className={styles.footerText}>alex@casapeptides.shop</span>
         </div>
 
-        <div className={styles.footerColumn}>
-          <h4 className={styles.columnHeading}>Newsletter</h4>
-          <p className={styles.footerText}>
-            Stay updated with latest research compound releases and lab reports.
-          </p>
-        </div>
       </div>
 
       <div className={styles.footerBar}>
