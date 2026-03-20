@@ -30,7 +30,7 @@ export default function Footer() {
           <h4 className={styles.columnHeading}>Company</h4>
           <span className={styles.footerText}>Privacy Policy</span>
           <span className={styles.footerText}>Terms of Service</span>
-          <span className={styles.footerText}>info@casapeptides.com</span>
+          <span className={styles.footerText}>alex@casapeptides.shop</span>
         </div>
 
         <div className={styles.footerColumn}>
