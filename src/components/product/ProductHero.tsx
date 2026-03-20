@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
@@ -13,6 +14,7 @@ export default function ProductHero({ product }: { product: Product }) {
   const { isInCompare, toggleCompare } = useCompare();
   const inCompare = isInCompare(product.cat);
   const variants = productsByBaseName[product.name] || [];
+  const [qty, setQty] = useState(1);
 
   return (
     <div className={styles.productHero}>
@@ -40,17 +42,30 @@ export default function ProductHero({ product }: { product: Product }) {
         {variants.length > 1 && (
           <SizePills variants={variants} currentCat={product.cat} />
         )}
-        <div className={styles.priceBox}>
-          <div className={styles.priceSize}>{product.size} per vial</div>
-          <div className={styles.priceMain}>{formatPrice(product.boxPrice)} <small>/ vial</small></div>
-          <div className={styles.priceBoxInfo}>Box of 10 vials: <strong>${product.boxPrice}</strong></div>
+        <div className={styles.priceMain}>{formatPrice(product.boxPrice)}</div>
+        <div className={styles.priceInfo}>{product.size} per vial &bull; Box of 10: ${product.boxPrice}</div>
+
+        <div className={styles.qtyRow}>
+          <button className={styles.qtyBtn} onClick={() => setQty(q => Math.max(1, q - 1))}>-</button>
+          <span className={styles.qtyValue}>{qty}</span>
+          <button className={styles.qtyBtn} onClick={() => setQty(q => q + 1)}>+</button>
         </div>
+
         <button
-          className={`${styles.btnCompare} ${inCompare ? styles.btnCompareAdded : ''}`}
+          className={styles.btnAddToCart}
           onClick={() => toggleCompare(product.cat)}
         >
-          {inCompare ? 'Remove from Compare' : 'Add to Compare'}
+          {inCompare ? 'Added to Compare' : 'Add to Cart'}
         </button>
+
+        {!inCompare && (
+          <button
+            className={styles.btnCompareLink}
+            onClick={() => toggleCompare(product.cat)}
+          >
+            + Add to Compare
+          </button>
+        )}
       </div>
     </div>
   );

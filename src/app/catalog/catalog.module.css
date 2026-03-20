@@ -1,27 +1,33 @@
-.heroSection {
+.catalogPage {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 2.5rem 2rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 2rem;
+  padding: 0 2rem 3rem;
 }
-.heroContent h2 {
+.catalogHeader {
+  padding: 2.5rem 0 1rem;
+}
+.catalogTitle {
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--color-text-primary);
   letter-spacing: -0.02em;
 }
-.heroContent p {
+.catalogSubtitle {
   font-size: 0.95rem;
   color: var(--color-text-muted);
   margin-top: 0.35rem;
 }
-.heroSearch { flex-shrink: 0; }
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
 .searchBox {
   position: relative;
+  flex: 1;
+  max-width: 400px;
 }
 .searchBox::before {
   content: '\01F50D';
@@ -33,33 +39,65 @@
   pointer-events: none;
 }
 .searchInput {
-  width: 320px;
+  width: 100%;
   background: var(--color-form);
   color: var(--color-text-secondary);
-  border: 1.5px solid var(--color-border-light);
-  border-radius: var(--radius-pill);
+  border: none;
+  border-radius: var(--radius-md);
   padding: 0.7rem 1.25rem 0.7rem 2.75rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: outline var(--transition-fast);
 }
 .searchInput:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(212,186,153,0.25);
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}
+.mobileFilterBtn {
+  display: none;
+  background: var(--color-bg-elevated);
+  color: var(--color-text-secondary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.mobileFilterBtn:hover {
+  background: var(--color-bg-hover);
+}
+.catalogLayout {
+  display: flex;
+  gap: 2rem;
+}
+.sidebarWrapper {
+  flex-shrink: 0;
+}
+.mainContent {
+  flex: 1;
+  min-width: 0;
 }
 
-@media (max-width: 1024px) {
-  .heroSection {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 2rem 2rem 1rem;
-  }
-  .searchInput { width: 100%; }
-  .heroSearch { width: 100%; }
-}
 @media (max-width: 768px) {
-  .heroSection { padding: 1.5rem 1rem 1rem; }
-  .heroContent h2 { font-size: 1.35rem; }
+  .catalogPage { padding: 0 1rem 2rem; }
+  .catalogHeader { padding: 1.5rem 0 1rem; }
+  .catalogTitle { font-size: 1.35rem; }
+  .searchBox { max-width: none; }
+  .mobileFilterBtn { display: block; }
+  .sidebarWrapper { display: none; }
+  .sidebarWrapper.sidebarOpen {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg-primary);
+    z-index: 200;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+  }
 }

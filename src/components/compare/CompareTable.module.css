@@ -42,7 +42,6 @@
   cursor: pointer;
   inset: 0;
   background: var(--color-bg-elevated);
-  border: 1.5px solid var(--color-border-light);
   border-radius: 24px;
   transition: var(--transition-fast);
 }
@@ -51,15 +50,14 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  left: 2px;
-  bottom: 2px;
+  left: 3px;
+  bottom: 3px;
   background: var(--color-text-muted);
   border-radius: 50%;
   transition: var(--transition-fast);
 }
 .toggleSwitch input:checked + .toggleSlider {
   background: var(--color-accent);
-  border-color: var(--color-accent);
 }
 .toggleSwitch input:checked + .toggleSlider::before {
   transform: translateX(20px);
@@ -68,13 +66,11 @@
 .compareTable {
   width: 100%;
   border-collapse: collapse;
-  border: 1.5px solid var(--color-border-light);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
 .compareTable th, .compareTable td {
   padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--color-border-light);
   text-align: left;
   vertical-align: top;
 }
@@ -86,6 +82,8 @@
   min-width: 120px;
   width: 130px;
 }
+.compareTable tr:nth-child(even) td { background: var(--color-bg-elevated); }
+.compareTable tr:nth-child(odd) td { background: var(--color-bg-secondary); }
 .compareTable td { font-size: 0.9rem; }
 .colHeader {
   background: var(--color-bg-secondary);
@@ -108,12 +106,8 @@
 }
 .colRemove:hover { color: var(--color-error); }
 .diffHighlight td:not(:first-child) {
-  background: rgba(212,186,153,0.12);
+  background: rgba(230,193,133,0.08);
   border-left: 3px solid var(--color-accent);
-}
-:global([data-theme="dark"]) .diffHighlight td:not(:first-child) {
-  background: rgba(212,186,153,0.08);
-  border-left: 3px solid rgba(212,186,153,0.4);
 }
 .empty {
   text-align: center;

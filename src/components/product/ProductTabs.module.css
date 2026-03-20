@@ -2,7 +2,6 @@
 .tabNav {
   display: flex;
   gap: 0;
-  border-bottom: 2px solid var(--color-border-light);
   margin-bottom: 1.5rem;
 }
 .tabNavBtn {
@@ -15,12 +14,11 @@
   color: var(--color-text-muted);
   cursor: pointer;
   border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
   transition: all var(--transition-fast);
 }
 .tabNavBtn:hover { color: var(--color-text-primary); }
 .tabNavBtnActive {
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
   border-bottom-color: var(--color-accent);
 }
 .tabPanel { display: none; }
@@ -28,7 +26,6 @@
 .infoTable {
   width: 100%;
   border-collapse: collapse;
-  border: 1.5px solid var(--color-border-light);
   border-radius: var(--radius-md);
   overflow: hidden;
 }
@@ -40,13 +37,18 @@
   font-weight: 600;
   color: var(--color-text-primary);
   width: 160px;
-  border-bottom: 1px solid var(--color-border-light);
   font-size: 0.9rem;
 }
 .infoTable td {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--color-border-light);
   font-size: 0.9rem;
+}
+.infoTable tr:nth-child(even) th,
+.infoTable tr:nth-child(even) td {
+  background: var(--color-bg-elevated);
+}
+.infoTable tr:nth-child(odd) td {
+  background: var(--color-bg-secondary);
 }
 .sizeVariants { margin-bottom: 2.5rem; }
 .sizeVariants h3 {
@@ -63,7 +65,6 @@
 }
 .variantCard {
   background: var(--color-bg-secondary);
-  border: 1.5px solid var(--color-border-light);
   border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
   cursor: pointer;
@@ -73,12 +74,11 @@
   display: block;
 }
 .variantCard:hover {
-  border-color: var(--color-accent);
   background: var(--color-bg-elevated);
 }
 .variantCardCurrent {
-  border-color: var(--color-accent);
-  background: var(--color-accent-bg);
+  background: rgba(230,193,133,0.08);
+  box-shadow: 0 0 0 2px var(--color-accent);
 }
 .variantSize {
   font-family: var(--font-display);
@@ -89,7 +89,7 @@
 }
 .variantPrice {
   font-size: 0.85rem;
-  color: var(--color-success);
+  color: var(--color-accent);
   font-weight: 500;
 }
 .variantCat {
@@ -99,5 +99,18 @@
 }
 .catValue {
   font-family: monospace;
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
+}
+.researchNote {
+  padding: 1.5rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+.reviewsPlaceholder {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
 }

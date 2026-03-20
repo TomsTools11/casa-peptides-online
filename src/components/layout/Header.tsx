@@ -2,54 +2,35 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useTheme } from '@/hooks/useTheme';
-import { peptides, categories } from '@/lib/products';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') return pathname === '/';
+    return pathname.startsWith(href);
+  };
 
   return (
     <div className={styles.header}>
       <div className={styles.headerInner}>
         <Link href="/" className={styles.headerBrand}>
           <Image
-            src="/images/logos/casa-1.png"
+            src="/images/logos/cplogo.png"
             alt="Casa Peptides"
             width={88}
             height={44}
-            className={`${styles.headerLogo} ${styles.headerLogoLight}`}
+            className={styles.headerLogo}
             priority
           />
-          <Image
-            src="/images/logos/casa-3.png"
-            alt="Casa Peptides"
-            width={88}
-            height={44}
-            className={`${styles.headerLogo} ${styles.headerLogoDark}`}
-            priority
-          />
-          <span className={styles.headerSubtitle}>Product Catalog</span>
         </Link>
         <nav className={styles.headerNav}>
-          <Link href="/" className={styles.navLink}>Home</Link>
-          <Link href="/catalog" className={styles.navLink}>Full Catalogue</Link>
-          <Link href="/blog" className={styles.navLink}>Blog</Link>
+          <Link href="/" className={`${styles.navLink} ${isActive('/') ? styles.navLinkActive : ''}`}>Home</Link>
+          <Link href="/catalog" className={`${styles.navLink} ${isActive('/catalog') ? styles.navLinkActive : ''}`}>Full Catalogue</Link>
+          <Link href="/blog" className={`${styles.navLink} ${isActive('/blog') ? styles.navLinkActive : ''}`}>Blog</Link>
         </nav>
-        <div className={styles.headerRight}>
-          <div className={styles.headerStats}>
-            <span>Total Products: <strong>{peptides.length}</strong></span>
-            <span>Categories: <strong>{categories.length}</strong></span>
-          </div>
-          <button
-            className="theme-toggle"
-            onClick={toggleTheme}
-            title="Toggle dark mode"
-            aria-label="Toggle dark mode"
-          >
-            {theme === 'dark' ? '☀️' : '🌙'}
-          </button>
-        </div>
       </div>
     </div>
   );

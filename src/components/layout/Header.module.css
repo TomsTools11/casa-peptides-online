@@ -1,6 +1,7 @@
 .header {
-  background: var(--color-bg-secondary);
-  border-bottom: 1px solid var(--color-border-light);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -17,58 +18,35 @@
 .headerBrand {
   display: flex;
   align-items: center;
-  gap: 1rem;
   cursor: pointer;
   text-decoration: none;
 }
 .headerLogo { height: 44px; width: auto; }
-.headerLogoLight { display: block; }
-.headerLogoDark { display: none; }
-:global([data-theme="dark"]) .headerLogoLight { display: none; }
-:global([data-theme="dark"]) .headerLogoDark { display: block; }
-.headerSubtitle {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  padding-left: 1rem;
-  border-left: 1.5px solid var(--color-border);
-}
 .headerNav {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-left: auto;
-  margin-right: 1.5rem;
+  gap: 2rem;
 }
 .navLink {
   font-family: var(--font-display);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color var(--transition-fast);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 .navLink:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-accent);
 }
-.headerRight {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+.navLinkActive {
+  color: var(--color-accent);
 }
-.headerStats {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.85rem;
-  color: var(--color-text-muted);
-}
-.headerStats strong { color: var(--color-text-primary); }
 
 @media (max-width: 768px) {
   .header { padding: 0.75rem 1rem; }
-  .headerSubtitle, .headerStats { display: none; }
-  .headerNav { margin-left: auto; margin-right: 0.5rem; gap: 1rem; }
-  .navLink { font-size: 0.85rem; }
+  .headerNav { gap: 1.25rem; }
+  .navLink { font-size: 0.7rem; }
   .headerLogo { height: 36px !important; }
 }

@@ -1,17 +1,49 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
-      <Image
-        src="/images/logos/casa-5.png"
-        alt="Casa Peptides"
-        width={64}
-        height={32}
-        className={styles.footerLogo}
-      />
-      <p>Casa Peptides Product Catalog &mdash; Internal Reference &mdash; All prices per single vial &mdash; Updated March 2026</p>
-    </div>
+    <footer className={styles.footer}>
+      <div className={styles.footerInner}>
+        <div className={styles.footerBrand}>
+          <Image
+            src="/images/logos/cplogo.png"
+            alt="Casa Peptides"
+            width={160}
+            height={44}
+            className={styles.footerLogo}
+          />
+          <p className={styles.brandTagline}>
+            Precision peptides and research compounds for scientific study.
+          </p>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h4 className={styles.columnHeading}>Resources</h4>
+          <Link href="/catalog" className={styles.footerLink}>Full Catalogue</Link>
+          <Link href="/blog" className={styles.footerLink}>Research Articles</Link>
+          <span className={styles.footerText}>COA Documentation</span>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h4 className={styles.columnHeading}>Company</h4>
+          <span className={styles.footerText}>Privacy Policy</span>
+          <span className={styles.footerText}>Terms of Service</span>
+          <span className={styles.footerText}>info@casapeptides.com</span>
+        </div>
+
+        <div className={styles.footerColumn}>
+          <h4 className={styles.columnHeading}>Newsletter</h4>
+          <p className={styles.footerText}>
+            Stay updated with latest research compound releases and lab reports.
+          </p>
+        </div>
+      </div>
+
+      <div className={styles.footerBar}>
+        <p>&copy; {new Date().getFullYear()} Casa Peptides. For research purposes only.</p>
+      </div>
+    </footer>
   );
 }

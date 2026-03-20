@@ -6,7 +6,7 @@
 .sizePill {
   background: var(--color-form);
   color: var(--color-text-secondary);
-  border: 1.5px solid var(--color-border-light);
+  border: none;
   border-radius: var(--radius-pill);
   padding: 0.4rem 1rem;
   font-size: 0.85rem;
@@ -17,11 +17,9 @@
   display: inline-block;
 }
 .sizePill:hover {
-  border-color: var(--color-accent);
   background: var(--color-accent-bg);
 }
 .active {
   background: var(--color-accent);
   color: var(--color-on-accent);
-  border-color: var(--color-accent);
 }

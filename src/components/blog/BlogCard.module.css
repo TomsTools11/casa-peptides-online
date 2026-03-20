@@ -1,6 +1,5 @@
 .card {
-  background: var(--color-bg-secondary);
-  border: 1.5px solid var(--color-border-light);
+  background: var(--color-bg-elevated);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
   transition: all var(--transition-base);
@@ -9,7 +8,6 @@
   cursor: pointer;
 }
 .card:hover {
-  border-color: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
@@ -46,7 +44,6 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--color-border-light);
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }

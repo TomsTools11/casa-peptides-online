@@ -11,10 +11,10 @@ interface ControlsBarProps {
   onSortChange: (value: SortKey) => void;
   viewMode: ViewMode;
   onViewChange: (mode: ViewMode) => void;
-  priceMin: string;
-  onPriceMinChange: (value: string) => void;
-  priceMax: string;
-  onPriceMaxChange: (value: string) => void;
+  priceMin?: string;
+  onPriceMinChange?: (value: string) => void;
+  priceMax?: string;
+  onPriceMaxChange?: (value: string) => void;
 }
 
 export default function ControlsBar({
@@ -37,28 +37,30 @@ export default function ControlsBar({
           />
         </div>
       )}
-      <div className={styles.priceFilter}>
-        <span>Price:</span>
-        <input
-          type="number"
-          className={styles.priceInput}
-          placeholder="Min"
-          value={priceMin}
-          min="0"
-          step="0.5"
-          onChange={e => onPriceMinChange(e.target.value)}
-        />
-        <span>&mdash;</span>
-        <input
-          type="number"
-          className={styles.priceInput}
-          placeholder="Max"
-          value={priceMax}
-          min="0"
-          step="0.5"
-          onChange={e => onPriceMaxChange(e.target.value)}
-        />
-      </div>
+      {priceMin !== undefined && onPriceMinChange && onPriceMaxChange && (
+        <div className={styles.priceFilter}>
+          <span>Price:</span>
+          <input
+            type="number"
+            className={styles.priceInput}
+            placeholder="Min"
+            value={priceMin}
+            min="0"
+            step="0.5"
+            onChange={e => onPriceMinChange(e.target.value)}
+          />
+          <span>&mdash;</span>
+          <input
+            type="number"
+            className={styles.priceInput}
+            placeholder="Max"
+            value={priceMax}
+            min="0"
+            step="0.5"
+            onChange={e => onPriceMaxChange(e.target.value)}
+          />
+        </div>
+      )}
       <select
         className={styles.sortSelect}
         value={sortKey}

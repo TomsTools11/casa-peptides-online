@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import type { Product } from '@/lib/types';
 import { formatPrice } from '@/lib/utils';
 import { useCompare } from '@/hooks/useCompare';
@@ -26,19 +27,27 @@ export default function ProductCard({ product }: { product: Product }) {
           onChange={() => toggleCompare(product.cat)}
         />
       </label>
-      <div className={styles.cardHeader}>
-        <div className={styles.cardName}>{product.name}</div>
-        <div className={styles.cardCat}>{product.cat}</div>
+      <div className={styles.imageBox}>
+        <Image
+          src="/images/logos/bottle-blank.png"
+          alt={product.name}
+          width={120}
+          height={140}
+          className={styles.productImage}
+        />
       </div>
-      <div className={styles.cardDesc}>{product.desc}</div>
-      <span className={styles.cardTag}>{product.category}</span>
-      <div className={styles.cardFooter}>
-        <div>
-          <div className={styles.cardPrice}>
-            {formatPrice(product.boxPrice)} <span className={styles.cardPriceLabel}>/ vial</span>
-          </div>
-          <div className={styles.cardSize}>{product.size} per vial &bull; Box of 10: ${product.boxPrice}</div>
-        </div>
+      <div className={styles.cardBody}>
+        <div className={styles.cardName}>{product.name}</div>
+        <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>
+        <button
+          className={styles.shopBtn}
+          onClick={e => {
+            e.stopPropagation();
+            router.push(`/catalog/product/${product.cat}`);
+          }}
+        >
+          Shop
+        </button>
       </div>
     </div>
   );

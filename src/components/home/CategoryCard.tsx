@@ -8,29 +8,29 @@ interface CategoryCardProps {
   delay: number;
 }
 
+const categoryIcons: Record<string, string> = {
+  'peptides': '\u{1F9EA}',
+  'research-compounds': '\u{1F52C}',
+  'growth-factors': '\u{1F9EC}',
+  'amino-acids': '\u{2697}',
+  'accessories': '\u{1F9F0}',
+  'cosmetic-peptides': '\u{2728}',
+  'metabolic': '\u{1F525}',
+  'sexual-health': '\u{1F48A}',
+};
+
 export default function CategoryCard({ category, stats, delay }: CategoryCardProps) {
+  const icon = categoryIcons[category.slug] || '\u{1F4CB}';
+
   return (
     <Link
       href={`/catalog/${category.slug}`}
       className={styles.card}
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className={styles.accent} />
-      <div className={styles.body}>
-        <h2 className={styles.name}>{category.name}</h2>
-        <p className={styles.description}>{category.description}</p>
-        <div className={styles.pills}>
-          {category.featuredProducts.map(product => (
-            <span key={product} className={styles.pill}>{product}</span>
-          ))}
-        </div>
-        <div className={styles.footer}>
-          <span className={styles.count}>
-            <strong>{stats.productCount}</strong> product{stats.productCount !== 1 ? 's' : ''} &middot; {stats.skuCount} SKU{stats.skuCount !== 1 ? 's' : ''}
-          </span>
-          <span className={styles.arrow}>&rarr;</span>
-        </div>
-      </div>
+      <span className={styles.icon}>{icon}</span>
+      <h2 className={styles.name}>{category.name}</h2>
+      <p className={styles.count}>{stats.productCount} products</p>
     </Link>
   );
 }

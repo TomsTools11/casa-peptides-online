@@ -1,14 +1,17 @@
 import HomeHero from '@/components/home/HomeHero';
+import TrustBar from '@/components/home/TrustBar';
 import CategoryGrid from '@/components/home/CategoryGrid';
-import styles from './page.module.css';
+import FeaturedProducts from '@/components/home/FeaturedProducts';
+import QualitySection from '@/components/home/QualitySection';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
       <HomeHero />
-      <div className={styles.grid}>
-        <CategoryGrid />
-      </div>
+      <TrustBar />
+      <CategoryGrid />
+      <FeaturedProducts />
+      <QualitySection />
     </div>
   );
 }

@@ -4,38 +4,37 @@ import { useState } from 'react';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
 import { formatPrice } from '@/lib/utils';
-import { productsByBaseName, productsByCategory } from '@/lib/products';
-import ProductGrid from '@/components/catalog/ProductGrid';
+import { productsByBaseName } from '@/lib/products';
 import styles from './ProductTabs.module.css';
 
 export default function ProductTabs({ product }: { product: Product }) {
-  const [activeTab, setActiveTab] = useState<'overview' | 'details'>('overview');
+  const [activeTab, setActiveTab] = useState<'description' | 'research' | 'reviews'>('description');
   const variants = productsByBaseName[product.name] || [];
-
-  // Related products — same category, excluding same-name variants
-  const variantCats = new Set(variants.map(v => v.cat));
-  const related = (productsByCategory[product.category] || [])
-    .filter(p => !variantCats.has(p.cat))
-    .slice(0, 6);
 
   return (
     <div className={styles.productTabs}>
       <div className={styles.tabNav}>
         <button
-          className={`${styles.tabNavBtn} ${activeTab === 'overview' ? styles.tabNavBtnActive : ''}`}
-          onClick={() => setActiveTab('overview')}
+          className={`${styles.tabNavBtn} ${activeTab === 'description' ? styles.tabNavBtnActive : ''}`}
+          onClick={() => setActiveTab('description')}
         >
-          Overview
+          Description
         </button>
         <button
-          className={`${styles.tabNavBtn} ${activeTab === 'details' ? styles.tabNavBtnActive : ''}`}
-          onClick={() => setActiveTab('details')}
+          className={`${styles.tabNavBtn} ${activeTab === 'research' ? styles.tabNavBtnActive : ''}`}
+          onClick={() => setActiveTab('research')}
         >
-          Details
+          Research Information
+        </button>
+        <button
+          className={`${styles.tabNavBtn} ${activeTab === 'reviews' ? styles.tabNavBtnActive : ''}`}
+          onClick={() => setActiveTab('reviews')}
+        >
+          Reviews
         </button>
       </div>
 
-      <div className={`${styles.tabPanel} ${activeTab === 'overview' ? styles.tabPanelActive : ''}`}>
+      <div className={`${styles.tabPanel} ${activeTab === 'description' ? styles.tabPanelActive : ''}`}>
         <table className={styles.infoTable}>
           <tbody>
             <tr><th>Category</th><td>{product.category}</td></tr>
@@ -47,7 +46,7 @@ export default function ProductTabs({ product }: { product: Product }) {
         </table>
       </div>
 
-      <div className={`${styles.tabPanel} ${activeTab === 'details' ? styles.tabPanelActive : ''}`}>
+      <div className={`${styles.tabPanel} ${activeTab === 'research' ? styles.tabPanelActive : ''}`}>
         {variants.length > 1 && (
           <div className={styles.sizeVariants}>
             <h3>All Size Variants</h3>
@@ -66,19 +65,15 @@ export default function ProductTabs({ product }: { product: Product }) {
             </div>
           </div>
         )}
+        <div className={styles.researchNote}>
+          <p>This product is intended for research purposes only. Not for human consumption.</p>
+        </div>
+      </div>
 
-        {related.length > 0 && (
-          <div>
-            <h3 style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 600,
-              fontSize: '1.15rem',
-              color: 'var(--color-text-primary)',
-              marginBottom: '1rem',
-            }}>Related Products in {product.category}</h3>
-            <ProductGrid products={related} />
-          </div>
-        )}
+      <div className={`${styles.tabPanel} ${activeTab === 'reviews' ? styles.tabPanelActive : ''}`}>
+        <div className={styles.reviewsPlaceholder}>
+          <p>No reviews yet. Be the first to review this product.</p>
+        </div>
       </div>
     </div>
   );

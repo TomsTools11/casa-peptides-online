@@ -1,20 +1,28 @@
 import Link from 'next/link';
-import { peptides } from '@/lib/products';
-import { consolidatedCategories } from '@/lib/categories';
 import styles from './HomeHero.module.css';
 
 export default function HomeHero() {
   return (
     <div className={styles.hero}>
+      <div className={styles.overlay} />
       <div className={styles.inner}>
-        <h1 className={styles.heading}>Product Catalog</h1>
+        <span className={styles.label}>Peptide Research Grade</span>
+        <h1 className={styles.heading}>
+          Advanced{'\n'}Research{'\n'}Compounds.
+        </h1>
         <p className={styles.subtitle}>
-          Browse {peptides.length} products across {consolidatedCategories.length} categories.
-          Research-grade peptides, compounds, and supplies.
+          Meticulously synthesized compounds for biological
+          optimization. Precision engineered for academic and clinical
+          longitudinal studies.
         </p>
-        <Link href="/catalog" className={styles.cta}>
-          Browse Full Catalog &rarr;
-        </Link>
+        <div className={styles.ctaRow}>
+          <Link href="/catalog" className={styles.cta}>
+            Explore Catalog
+          </Link>
+          <Link href="/catalog" className={styles.ctaGhost}>
+            Lab Certifications
+          </Link>
+        </div>
       </div>
     </div>
   );
