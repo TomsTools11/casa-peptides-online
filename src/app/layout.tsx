@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Epilogue, Inter } from 'next/font/google';
+import Script from 'next/script';
 import CompareProvider from '@/components/providers/CompareProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -29,6 +30,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${epilogue.variable} ${inter.variable}`}>
+      <head>
+        <Script
+          src="https://t.contentsquare.net/uxa/8eb8f888fba1e.js"
+          strategy="afterInteractive"
+        />
+      </head>
       <body>
         <CompareProvider>
           <HashRedirect />
