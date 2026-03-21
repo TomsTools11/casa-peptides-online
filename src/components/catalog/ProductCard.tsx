@@ -38,7 +38,17 @@ export default function ProductCard({ product }: { product: Product }) {
       </div>
       <div className={styles.cardBody}>
         <div className={styles.cardName}>{product.name}</div>
-        <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>
+        <div className={styles.cardMeta}>
+          <span className={styles.cardCategory}>{product.category}</span>
+          <span className={styles.cardSize}>{product.size}</span>
+        </div>
+        <div className={styles.cardDesc}>
+          {product.desc.split('. ')[0]}.
+        </div>
+        <div className={styles.cardPrice}>
+          <span className={styles.priceLabel}>Starting at&hellip;</span>
+          {formatPrice(product.boxPrice)}
+        </div>
         <button
           className={styles.shopBtn}
           onClick={e => {
