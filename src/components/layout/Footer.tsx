@@ -9,7 +9,7 @@ export default function Footer() {
         <div className={styles.footerBrand}>
           <Image
             src="/images/logos/cplogo.png"
-            alt="Casa Peptides"
+            alt="Casa Labs"
             width={160}
             height={44}
             className={styles.footerLogo}

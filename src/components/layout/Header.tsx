@@ -19,7 +19,7 @@ export default function Header() {
         <Link href="/" className={styles.headerBrand}>
           <Image
             src="/images/logos/cplogo.png"
-            alt="Casa Peptides"
+            alt="Casa Labs"
             width={88}
             height={44}
             className={styles.headerLogo}
