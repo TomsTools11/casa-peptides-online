@@ -19,9 +19,6 @@ export default function HomeHero() {
           <Link href="/catalog" className={styles.cta}>
             Explore Catalog
           </Link>
-          <Link href="/catalog" className={styles.ctaGhost}>
-            Lab Certifications
-          </Link>
         </div>
       </div>
     </div>
