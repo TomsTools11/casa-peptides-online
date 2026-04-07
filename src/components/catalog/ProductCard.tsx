@@ -31,33 +31,15 @@ export default function ProductCard({ product }: { product: Product }) {
         <Image
           src="/images/logos/bottle-blank.png"
           alt={product.name}
-          width={120}
-          height={140}
+          width={160}
+          height={180}
           className={styles.productImage}
         />
       </div>
       <div className={styles.cardBody}>
         <div className={styles.cardName}>{product.name}</div>
-        <div className={styles.cardMeta}>
-          <span className={styles.cardCategory}>{product.category}</span>
-          <span className={styles.cardSize}>{product.size}</span>
-        </div>
-        <div className={styles.cardDesc}>
-          {product.desc.split('. ')[0]}.
-        </div>
-        <div className={styles.cardPrice}>
-          <span className={styles.priceLabel}>Starting at&hellip;</span>
-          {formatPrice(product.boxPrice)}
-        </div>
-        <button
-          className={styles.shopBtn}
-          onClick={e => {
-            e.stopPropagation();
-            router.push(`/catalog/product/${product.cat}`);
-          }}
-        >
-          Shop
-        </button>
+        <div className={styles.cardCategory}>{product.category.toUpperCase()}</div>
+        <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>
       </div>
     </div>
   );

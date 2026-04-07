@@ -1,66 +1,107 @@
-.productTabs { margin-top: 2rem; }
-.tabNav {
-  display: flex;
-  gap: 0;
-  margin-bottom: 1.5rem;
+.productAccordion {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
 }
-.tabNavBtn {
+
+.accordionItem {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
   background: none;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-text-muted);
   cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all var(--transition-fast);
+  transition: color var(--transition-fast);
 }
-.tabNavBtn:hover { color: var(--color-text-primary); }
-.tabNavBtnActive {
+.accordionHeader:hover .accordionTitle {
   color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
 }
-.tabPanel { display: none; }
-.tabPanelActive { display: block; }
-.infoTable {
-  width: 100%;
-  border-collapse: collapse;
-  border-radius: var(--radius-md);
+
+.accordionTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  transition: color var(--transition-fast);
+}
+
+.accordionChevron {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-base);
+  transform: rotate(0deg);
+  line-height: 1;
+}
+.chevronOpen {
+  transform: rotate(90deg);
+}
+
+.accordionBody {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.3s ease;
 }
-.infoTable th {
-  text-align: left;
-  padding: 0.75rem 1rem;
-  background: var(--color-bg-secondary);
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--color-text-primary);
-  width: 160px;
+.accordionBodyOpen {
+  max-height: 600px;
+}
+
+.accordionContent {
+  padding: 0 0 1.25rem;
+}
+
+.bodyText {
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
+  line-height: 1.7;
 }
-.infoTable td {
-  padding: 0.75rem 1rem;
-  font-size: 0.9rem;
-}
-.infoTable tr:nth-child(even) th,
-.infoTable tr:nth-child(even) td {
-  background: var(--color-bg-elevated);
-}
-.infoTable tr:nth-child(odd) td {
-  background: var(--color-bg-secondary);
-}
-.sizeVariants { margin-bottom: 2.5rem; }
-.sizeVariants h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: var(--color-text-primary);
+
+.infoTable {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
   margin-bottom: 1rem;
 }
+
+.infoRow {
+  display: flex;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 0.9rem;
+}
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.catValue {
+  font-family: monospace;
+  color: var(--color-accent);
+}
+
+.researchNote {
+  padding: 1rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 .variantGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.75rem;
 }
 .variantCard {
@@ -97,20 +138,8 @@
   color: var(--color-text-muted);
   font-family: monospace;
 }
-.catValue {
-  font-family: monospace;
-  color: var(--color-accent);
-}
-.researchNote {
-  padding: 1.5rem;
-  background: var(--color-bg-secondary);
-  border-radius: var(--radius-md);
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-}
-.reviewsPlaceholder {
-  padding: 2rem;
-  text-align: center;
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
+
+@media (max-width: 768px) {
+  .accordionTitle { font-size: 0.9rem; }
+  .infoLabel { min-width: 110px; }
 }

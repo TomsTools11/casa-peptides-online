@@ -7,74 +7,126 @@ import { formatPrice } from '@/lib/utils';
 import { productsByBaseName } from '@/lib/products';
 import styles from './ProductTabs.module.css';
 
+function AccordionItem({
+  title,
+  isOpen,
+  onToggle,
+  children,
+}: {
+  title: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className={styles.accordionItem}>
+      <button className={styles.accordionHeader} onClick={onToggle}>
+        <span className={styles.accordionTitle}>{title}</span>
+        <span className={`${styles.accordionChevron} ${isOpen ? styles.chevronOpen : ''}`}>
+          &#8250;
+        </span>
+      </button>
+      <div className={`${styles.accordionBody} ${isOpen ? styles.accordionBodyOpen : ''}`}>
+        <div className={styles.accordionContent}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ProductTabs({ product }: { product: Product }) {
-  const [activeTab, setActiveTab] = useState<'description' | 'research' | 'reviews'>('description');
+  const [openSection, setOpenSection] = useState<string | null>('benefits');
   const variants = productsByBaseName[product.name] || [];
 
+  const toggle = (key: string) => {
+    setOpenSection(prev => (prev === key ? null : key));
+  };
+
   return (
-    <div className={styles.productTabs}>
-      <div className={styles.tabNav}>
-        <button
-          className={`${styles.tabNavBtn} ${activeTab === 'description' ? styles.tabNavBtnActive : ''}`}
-          onClick={() => setActiveTab('description')}
-        >
-          Description
-        </button>
-        <button
-          className={`${styles.tabNavBtn} ${activeTab === 'research' ? styles.tabNavBtnActive : ''}`}
-          onClick={() => setActiveTab('research')}
-        >
-          Research Information
-        </button>
-        <button
-          className={`${styles.tabNavBtn} ${activeTab === 'reviews' ? styles.tabNavBtnActive : ''}`}
-          onClick={() => setActiveTab('reviews')}
-        >
-          Reviews
-        </button>
-      </div>
+    <div className={styles.productAccordion}>
+      <AccordionItem
+        title="Key Benefits"
+        isOpen={openSection === 'benefits'}
+        onToggle={() => toggle('benefits')}
+      >
+        <p className={styles.bodyText}>{product.desc}</p>
+      </AccordionItem>
 
-      <div className={`${styles.tabPanel} ${activeTab === 'description' ? styles.tabPanelActive : ''}`}>
-        <table className={styles.infoTable}>
-          <tbody>
-            <tr><th>Category</th><td>{product.category}</td></tr>
-            <tr><th>Catalog No.</th><td className={styles.catValue}>{product.cat}</td></tr>
-            <tr><th>Size / Vial</th><td>{product.size}</td></tr>
-            <tr><th>Description</th><td>{product.desc}</td></tr>
-            <tr><th>Box Contents</th><td>10 vials &times; {product.size}</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div className={`${styles.tabPanel} ${activeTab === 'research' ? styles.tabPanelActive : ''}`}>
-        {variants.length > 1 && (
-          <div className={styles.sizeVariants}>
-            <h3>All Size Variants</h3>
-            <div className={styles.variantGrid}>
-              {variants.map(v => (
-                <Link
-                  key={v.cat}
-                  href={`/catalog/product/${v.cat}`}
-                  className={`${styles.variantCard} ${v.cat === product.cat ? styles.variantCardCurrent : ''}`}
-                >
-                  <div className={styles.variantSize}>{v.size}</div>
-                  <div className={styles.variantPrice}>{formatPrice(v.boxPrice)}/vial</div>
-                  <div className={styles.variantCat}>{v.cat}</div>
-                </Link>
-              ))}
-            </div>
+      <AccordionItem
+        title="Important information"
+        isOpen={openSection === 'important'}
+        onToggle={() => toggle('important')}
+      >
+        <div className={styles.infoTable}>
+          <div className={styles.infoRow}>
+            <span className={styles.infoLabel}>Category</span>
+            <span>{product.category}</span>
           </div>
-        )}
-        <div className={styles.researchNote}>
-          <p>This product is intended for research purposes only. Not for human consumption.</p>
+          <div className={styles.infoRow}>
+            <span className={styles.infoLabel}>Catalog No.</span>
+            <span className={styles.catValue}>{product.cat}</span>
+          </div>
+          <div className={styles.infoRow}>
+            <span className={styles.infoLabel}>Size / Vial</span>
+            <span>{product.size}</span>
+          </div>
+          <div className={styles.infoRow}>
+            <span className={styles.infoLabel}>Box Contents</span>
+            <span>10 vials &times; {product.size}</span>
+          </div>
         </div>
-      </div>
+        <p className={styles.researchNote}>
+          This product is intended for research purposes only. Not for human consumption.
+        </p>
+      </AccordionItem>
 
-      <div className={`${styles.tabPanel} ${activeTab === 'reviews' ? styles.tabPanelActive : ''}`}>
-        <div className={styles.reviewsPlaceholder}>
-          <p>No reviews yet. Be the first to review this product.</p>
-        </div>
-      </div>
+      <AccordionItem
+        title="How it works"
+        isOpen={openSection === 'howitworks'}
+        onToggle={() => toggle('howitworks')}
+      >
+        <p className={styles.bodyText}>
+          {product.desc.split('. ').slice(0, 2).join('. ')}.
+        </p>
+      </AccordionItem>
+
+      <AccordionItem
+        title="Subscription and Billing Details"
+        isOpen={openSection === 'billing'}
+        onToggle={() => toggle('billing')}
+      >
+        {variants.length > 1 ? (
+          <div className={styles.variantGrid}>
+            {variants.map(v => (
+              <Link
+                key={v.cat}
+                href={`/catalog/product/${v.cat}`}
+                className={`${styles.variantCard} ${v.cat === product.cat ? styles.variantCardCurrent : ''}`}
+              >
+                <div className={styles.variantSize}>{v.size}</div>
+                <div className={styles.variantPrice}>{formatPrice(v.boxPrice)}/vial</div>
+                <div className={styles.variantCat}>{v.cat}</div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <p className={styles.bodyText}>
+            {product.size} per vial &bull; Box of 10: ${product.boxPrice}
+          </p>
+        )}
+      </AccordionItem>
+
+      <AccordionItem
+        title="Why Casa Peptides"
+        isOpen={openSection === 'why'}
+        onToggle={() => toggle('why')}
+      >
+        <p className={styles.bodyText}>
+          Trusted quality, rigorous testing, and expert support for your research needs.
+          Every product is backed by third-party purity verification and dedicated customer service.
+        </p>
+      </AccordionItem>
     </div>
   );
 }

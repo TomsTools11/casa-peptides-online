@@ -4,91 +4,44 @@
   padding: 0 2rem 3rem;
 }
 .catalogHeader {
-  padding: 2.5rem 0 1rem;
+  padding: 2.5rem 0 1.5rem;
 }
 .catalogTitle {
   font-family: var(--font-display);
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-text-primary);
   letter-spacing: -0.02em;
 }
-.catalogSubtitle {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
-  margin-top: 0.35rem;
-}
-.searchRow {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.searchBox {
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-}
-.searchBox::before {
-  content: '\01F50D';
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.85rem;
-  pointer-events: none;
-}
-.searchInput {
-  width: 100%;
-  background: var(--color-form);
-  color: var(--color-text-secondary);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 0.7rem 1.25rem 0.7rem 2.75rem;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  transition: outline var(--transition-fast);
-}
-.searchInput:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: -2px;
-}
+
 .mobileFilterBtn {
   display: none;
-  background: var(--color-bg-elevated);
-  color: var(--color-text-secondary);
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
   border: none;
-  border-radius: var(--radius-md);
-  padding: 0.7rem 1.25rem;
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1.5rem;
   font-family: var(--font-display);
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  z-index: 100;
+  box-shadow: var(--shadow-lg);
 }
-.mobileFilterBtn:hover {
-  background: var(--color-bg-hover);
-}
-.catalogLayout {
-  display: flex;
-  gap: 2rem;
-}
-.sidebarWrapper {
-  flex-shrink: 0;
-}
-.mainContent {
-  flex: 1;
-  min-width: 0;
+
+.sidebarOverlay {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .catalogPage { padding: 0 1rem 2rem; }
   .catalogHeader { padding: 1.5rem 0 1rem; }
-  .catalogTitle { font-size: 1.35rem; }
-  .searchBox { max-width: none; }
+  .catalogTitle { font-size: 1.75rem; }
   .mobileFilterBtn { display: block; }
-  .sidebarWrapper { display: none; }
-  .sidebarWrapper.sidebarOpen {
+  .sidebarOverlay.sidebarOpen {
     display: block;
     position: fixed;
     top: 0;

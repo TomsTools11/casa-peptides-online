@@ -35,61 +35,52 @@ export default function CatalogClient() {
   return (
     <div className={styles.catalogPage}>
       <div className={styles.catalogHeader}>
-        <h1 className={styles.catalogTitle}>Compounds.</h1>
-        <p className={styles.catalogSubtitle}>{peptides.length} products across {categories.length} categories</p>
+        <h1 className={styles.catalogTitle}>Catalogue</h1>
       </div>
 
-      <div className={styles.searchRow}>
-        <div className={styles.searchBox}>
-          <input
-            type="text"
-            className={styles.searchInput}
-            placeholder="Search products..."
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-          />
-        </div>
-        <button
-          className={styles.mobileFilterBtn}
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-        >
-          Filters
-        </button>
-      </div>
+      <ControlsBar
+        includeSearch={true}
+        searchTerm={searchTerm}
+        onSearchChange={setSearchTerm}
+        sortKey={sortKey}
+        onSortChange={setSortKey}
+        viewMode={viewMode}
+        onViewChange={setViewMode}
+        priceMin={priceMin}
+        onPriceMinChange={setPriceMin}
+        priceMax={priceMax}
+        onPriceMaxChange={setPriceMax}
+        productCount={filtered.length}
+      />
 
-      <div className={styles.catalogLayout}>
-        <div className={`${styles.sidebarWrapper} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
-          <SidebarFilter
-            categories={categories}
-            activeCategory={activeCategory}
-            onCategoryChange={(cat) => {
-              setActiveCategory(cat);
-              setSidebarOpen(false);
-            }}
-            priceMin={priceMin}
-            onPriceMinChange={setPriceMin}
-            priceMax={priceMax}
-            onPriceMaxChange={setPriceMax}
-            productCounts={productCounts}
-            totalCount={peptides.length}
-          />
-        </div>
-        <div className={styles.mainContent}>
-          <ControlsBar
-            includeSearch={false}
-            searchTerm={searchTerm}
-            onSearchChange={setSearchTerm}
-            sortKey={sortKey}
-            onSortChange={setSortKey}
-            viewMode={viewMode}
-            onViewChange={setViewMode}
-          />
-          {viewMode === 'grid' ? (
-            <ProductGrid products={filtered} />
-          ) : (
-            <ProductTable products={filtered} />
-          )}
-        </div>
+      {viewMode === 'grid' ? (
+        <ProductGrid products={filtered} />
+      ) : (
+        <ProductTable products={filtered} />
+      )}
+
+      {/* Mobile filter overlay */}
+      <button
+        className={styles.mobileFilterBtn}
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        Filters
+      </button>
+      <div className={`${styles.sidebarOverlay} ${sidebarOpen ? styles.sidebarOpen : ''}`}>
+        <SidebarFilter
+          categories={categories}
+          activeCategory={activeCategory}
+          onCategoryChange={(cat) => {
+            setActiveCategory(cat);
+            setSidebarOpen(false);
+          }}
+          priceMin={priceMin}
+          onPriceMinChange={setPriceMin}
+          priceMax={priceMax}
+          onPriceMaxChange={setPriceMax}
+          productCounts={productCounts}
+          totalCount={peptides.length}
+        />
       </div>
     </div>
   );
