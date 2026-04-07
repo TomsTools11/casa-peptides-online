@@ -36,7 +36,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerBar}>
-        <p>&copy; {new Date().getFullYear()} Casa Peptides. For research purposes only.</p>
+        <p>&copy; {new Date().getFullYear()} Casa Labs. For research purposes only.</p>
       </div>
     </footer>
   );

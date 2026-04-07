@@ -1,4 +1,4 @@
-# Casa Peptides Catalog — Advanced Interactive Upgrade Plan
+# Casa Labs Catalog — Advanced Interactive Upgrade Plan
 
 ## Context
 

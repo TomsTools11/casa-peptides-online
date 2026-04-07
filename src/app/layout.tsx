@@ -23,8 +23,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Casa Peptides — Advanced Research Compounds',
-  description: 'Precision peptides and research compounds for scientific study. Browse the complete Casa Peptides catalog.',
+  title: 'Casa Labs — Advanced Research Compounds',
+  description: 'Precision peptides and research compounds for scientific study. Browse the complete Casa Labs catalog.',
   icons: {
     icon: '/images/logos/favicon.png',
     apple: '/images/logos/favicon.png',

@@ -1,4 +1,4 @@
-# Casa Peptides Catalog — Unified Redesign & Upgrade Plan
+# Casa Labs Catalog — Unified Redesign & Upgrade Plan
 
 ## Context
 
@@ -111,7 +111,7 @@ Replace the text-based `<h1>` with an `<img>` logo:
 
 ```html
 <div class="header-brand">
-  <img src="Images/Casa-logos/casa 1.png" alt="Casa Peptides" class="header-logo">
+  <img src="Images/Casa-logos/casa 1.png" alt="Casa Labs" class="header-logo">
   <span class="header-subtitle">Product Catalog</span>
 </div>
 ```

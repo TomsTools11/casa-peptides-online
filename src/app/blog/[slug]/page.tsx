@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = getPostBySlug(slug);
   if (!post) return { title: 'Post Not Found' };
   return {
-    title: `${post.title} — Casa Peptides Blog`,
+    title: `${post.title} — Casa Labs Blog`,
     description: post.description,
   };
 }

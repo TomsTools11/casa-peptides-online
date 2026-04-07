@@ -118,7 +118,7 @@ export default function ProductTabs({ product }: { product: Product }) {
       </AccordionItem>
 
       <AccordionItem
-        title="Why Casa Peptides"
+        title="Why Casa Labs"
         isOpen={openSection === 'why'}
         onToggle={() => toggle('why')}
       >
