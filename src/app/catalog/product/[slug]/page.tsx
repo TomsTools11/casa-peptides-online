@@ -34,8 +34,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         { label: product.name },
       ]} />
       <div style={{ maxWidth: 1400, margin: '0 auto', padding: '1.5rem 2rem 3rem' }}>
-        <ProductHero product={product} />
-        <ProductTabs product={product} />
+        <ProductHero product={product}>
+          <ProductTabs product={product} />
+        </ProductHero>
         <RelatedProducts product={product} />
       </div>
     </>

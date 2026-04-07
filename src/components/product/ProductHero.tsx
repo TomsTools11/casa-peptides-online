@@ -9,7 +9,7 @@ import { useCompare } from '@/hooks/useCompare';
 import SizePills from './SizePills';
 import styles from './ProductHero.module.css';
 
-export default function ProductHero({ product }: { product: Product }) {
+export default function ProductHero({ product, children }: { product: Product; children?: React.ReactNode }) {
   const { isInCompare, toggleCompare } = useCompare();
   const inCompare = isInCompare(product.cat);
   const variants = productsByBaseName[product.name] || [];
@@ -62,6 +62,8 @@ export default function ProductHero({ product }: { product: Product }) {
             + Add to Compare
           </button>
         )}
+
+        {children}
       </div>
     </div>
   );
