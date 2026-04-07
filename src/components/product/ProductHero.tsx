@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
@@ -14,7 +13,6 @@ export default function ProductHero({ product }: { product: Product }) {
   const { isInCompare, toggleCompare } = useCompare();
   const inCompare = isInCompare(product.cat);
   const variants = productsByBaseName[product.name] || [];
-  const [qty, setQty] = useState(1);
 
   return (
     <div className={styles.productHero}>
@@ -22,40 +20,38 @@ export default function ProductHero({ product }: { product: Product }) {
         <Image
           src="/images/logos/bottle-blank.png"
           alt="Product bottle"
-          width={280}
-          height={320}
+          width={320}
+          height={360}
           className={styles.productImage}
         />
       </div>
       <div className={styles.info}>
-        <div className={styles.title}>{product.name}</div>
-        <div className={styles.badges}>
-          <span className={`${styles.badge} ${styles.badgeCat}`}>{product.cat}</span>
-          <Link
-            href={`/catalog/${slugifyCategory(product.category)}`}
-            className={`${styles.badge} ${styles.badgeCategory}`}
-          >
+        <div className={styles.stockBadge}>
+          <span className={styles.stockDot} />
+          IN-STOCK
+        </div>
+
+        <h1 className={styles.title}>{product.name}</h1>
+
+        <p className={styles.description}>{product.desc}</p>
+
+        <div className={styles.priceMain}>{formatPrice(product.boxPrice)}</div>
+        <div className={styles.shippingNote}>
+          <Link href={`/catalog/${slugifyCategory(product.category)}`} className={styles.categoryLink}>
             {product.category}
           </Link>
+          {' · '}Shipping calculated at checkout.
         </div>
-        <div className={styles.description}>{product.desc}</div>
+
         {variants.length > 1 && (
           <SizePills variants={variants} currentCat={product.cat} />
         )}
-        <div className={styles.priceMain}>{formatPrice(product.boxPrice)}</div>
-        <div className={styles.priceInfo}>{product.size} per vial &bull; Box of 10: ${product.boxPrice}</div>
-
-        <div className={styles.qtyRow}>
-          <button className={styles.qtyBtn} onClick={() => setQty(q => Math.max(1, q - 1))}>-</button>
-          <span className={styles.qtyValue}>{qty}</span>
-          <button className={styles.qtyBtn} onClick={() => setQty(q => q + 1)}>+</button>
-        </div>
 
         <button
-          className={styles.btnAddToCart}
+          className={styles.btnBuyNow}
           onClick={() => toggleCompare(product.cat)}
         >
-          {inCompare ? 'Added to Compare' : 'Add to Cart'}
+          {inCompare ? 'Added to Compare' : 'Buy now'}
         </button>
 
         {!inCompare && (

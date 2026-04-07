@@ -55,6 +55,7 @@ export default function CategoryClient({ categorySlug }: { categorySlug: string 
         onPriceMinChange={setPriceMin}
         priceMax={priceMax}
         onPriceMaxChange={setPriceMax}
+        productCount={filtered.length}
       />
 
       <div className="main">
