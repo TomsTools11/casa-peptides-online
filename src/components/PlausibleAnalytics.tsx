@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect } from 'react';
-import { init } from '@plausible-analytics/tracker';
 
 export default function PlausibleAnalytics() {
   useEffect(() => {
-    init({
-      domain: 'casalabs.shop',
+    import('@plausible-analytics/tracker').then(({ init }) => {
+      init({
+        domain: 'casalabs.shop',
+      });
     });
   }, []);
 
