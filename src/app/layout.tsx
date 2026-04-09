@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CompareBar from '@/components/compare/CompareBar';
 import HashRedirect from '@/components/HashRedirect';
+import PlausibleAnalytics from '@/components/PlausibleAnalytics';
 import './globals.css';
 
 const epilogue = Epilogue({
@@ -34,16 +35,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${epilogue.variable} ${inter.variable}`}>
-      <head>
-        {/* Privacy-friendly analytics by Plausible */}
-        <script async src="https://plausible.io/js/pa-kkoGsGnv9q7ghPkX1omlQ.js" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()`,
-          }}
-        />
-      </head>
       <body>
+        <PlausibleAnalytics />
         <Script
           src="https://t.contentsquare.net/uxa/8eb8f888fba1e.js"
           strategy="afterInteractive"

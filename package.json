@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TomsTools11/casa-peptides-catalog#readme",
   "dependencies": {
+    "@plausible-analytics/tracker": "^0.4.4",
     "gray-matter": "^4.0.3",
     "next": "^16.1.6",
     "next-mdx-remote": "^6.0.0",
