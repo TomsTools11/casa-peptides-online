@@ -6,7 +6,7 @@ import { init } from '@plausible-analytics/tracker';
 export default function PlausibleAnalytics() {
   useEffect(() => {
     init({
-      domain: 'casapeptides.shop',
+      domain: 'casalabs.shop',
     });
   }, []);
 
