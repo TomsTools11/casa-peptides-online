@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <PlausibleAnalytics />
         <Script
-          src="https://t.contentsquare.net/uxa/8eb8f888fba1e.js"
+          src="https://t.contentsquare.net/uxa/ce9d3083e4f5e.js"
           strategy="afterInteractive"
         />
         <CompareProvider>
