@@ -45,8 +45,19 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #5a9a5a;
   display: inline-block;
+}
+.dotInStock {
+  background: #5a9a5a;
+}
+.dotComingSoon {
+  background: #e08a3c;
+}
+.stockBadgeInStock {
+  color: var(--color-text-secondary);
+}
+.stockBadgeComingSoon {
+  color: var(--color-text-secondary);
 }
 
 .title {
@@ -105,6 +116,26 @@
   text-align: center;
 }
 .btnBuyNow:hover { opacity: 0.9; }
+
+.keyBenefits {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+.keyBenefitsTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+.keyBenefitsText {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
 
 .btnCompareLink {
   background: none;
