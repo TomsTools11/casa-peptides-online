@@ -14,3 +14,13 @@ peptides.forEach(p => {
 });
 
 export const categories = Object.keys(productsByCategory).sort();
+
+/** One entry per product name (first variant), for catalog listings. */
+export const uniqueProducts: Product[] = (() => {
+  const seen = new Set<string>();
+  return peptides.filter(p => {
+    if (seen.has(p.name)) return false;
+    seen.add(p.name);
+    return true;
+  });
+})();

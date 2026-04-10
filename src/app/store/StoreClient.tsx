@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { peptides } from '@/lib/products';
+import { uniqueProducts } from '@/lib/products';
 import ProductGrid from '@/components/catalog/ProductGrid';
 import styles from './store.module.css';
 
@@ -12,7 +12,7 @@ export default function StoreClient() {
   const [sortKey, setSortKey] = useState<SortKey>('name-asc');
 
   const filtered = useMemo(() => {
-    let result = [...peptides];
+    let result = [...uniqueProducts];
 
     if (searchTerm) {
       const q = searchTerm.toLowerCase();

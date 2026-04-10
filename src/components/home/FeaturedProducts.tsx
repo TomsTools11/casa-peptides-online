@@ -1,22 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { peptides } from '@/lib/products';
+import { uniqueProducts } from '@/lib/products';
 import { formatPrice, getProductImage } from '@/lib/utils';
 import styles from './FeaturedProducts.module.css';
 
-function getUniqueProducts() {
-  const seen = new Set<string>();
-  return peptides.filter(p => {
-    if (!seen.has(p.name)) {
-      seen.add(p.name);
-      return true;
-    }
-    return false;
-  });
-}
-
 export default function FeaturedProducts() {
-  const products = getUniqueProducts();
+  const products = uniqueProducts;
 
   return (
     <section className={styles.section}>
