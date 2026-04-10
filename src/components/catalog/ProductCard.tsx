@@ -20,12 +20,15 @@ export default function ProductCard({ product }: { product: Product }) {
         <Image
           src="/images/logos/bottle-blank.png"
           alt={product.name}
-          width={160}
-          height={180}
+          width={140}
+          height={140}
           className={styles.productImage}
         />
       </div>
       <div className={styles.cardBody}>
+        <span className={product.inStock ? styles.statusBadgeInStock : styles.statusBadgeComingSoon}>
+          {product.inStock ? '🟢 In Stock' : '🟠 Coming Soon'}
+        </span>
         <div className={styles.cardName}>{product.name}</div>
         <div className={styles.cardCategory}>{product.category.toUpperCase()}</div>
         <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>

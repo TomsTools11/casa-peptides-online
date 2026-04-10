@@ -5,6 +5,7 @@ export interface Product {
   boxPrice: number;
   category: string;
   desc: string;
+  inStock?: boolean;
 }
 
 export interface CartItem {

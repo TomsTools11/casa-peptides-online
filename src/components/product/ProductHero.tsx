@@ -25,9 +25,9 @@ export default function ProductHero({ product }: { product: Product }) {
         />
       </div>
       <div className={styles.info}>
-        <div className={styles.stockBadge}>
-          <span className={styles.stockDot} />
-          IN-STOCK
+        <div className={`${styles.stockBadge} ${product.inStock ? styles.stockBadgeInStock : styles.stockBadgeComingSoon}`}>
+          <span className={`${styles.stockDot} ${product.inStock ? styles.dotInStock : styles.dotComingSoon}`} />
+          {product.inStock ? 'IN-STOCK' : 'COMING SOON'}
         </div>
 
         <h1 className={styles.title}>{product.name}</h1>
@@ -52,6 +52,11 @@ export default function ProductHero({ product }: { product: Product }) {
         >
           Add to Cart
         </button>
+
+        <div className={styles.keyBenefits}>
+          <h3 className={styles.keyBenefitsTitle}>Key Benefits</h3>
+          <p className={styles.keyBenefitsText}>{product.desc}</p>
+        </div>
       </div>
     </div>
   );

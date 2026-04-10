@@ -36,7 +36,7 @@ function AccordionItem({
 }
 
 export default function ProductTabs({ product }: { product: Product }) {
-  const [openSection, setOpenSection] = useState<string | null>('benefits');
+  const [openSection, setOpenSection] = useState<string | null>('important');
   const variants = productsByBaseName[product.name] || [];
 
   const toggle = (key: string) => {
@@ -45,14 +45,6 @@ export default function ProductTabs({ product }: { product: Product }) {
 
   return (
     <div className={styles.productAccordion}>
-      <AccordionItem
-        title="Key Benefits"
-        isOpen={openSection === 'benefits'}
-        onToggle={() => toggle('benefits')}
-      >
-        <p className={styles.bodyText}>{product.desc}</p>
-      </AccordionItem>
-
       <AccordionItem
         title="Important information"
         isOpen={openSection === 'important'}
