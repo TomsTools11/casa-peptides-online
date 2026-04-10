@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, getProductImage } from '@/lib/utils';
 import { useCart } from '@/hooks/useCart';
 import styles from './ProductCard.module.css';
 
@@ -18,7 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
     >
       <div className={styles.imageBox}>
         <Image
-          src="/images/logos/bottle-blank.png"
+          src={getProductImage(product.name)}
           alt={product.name}
           width={140}
           height={140}

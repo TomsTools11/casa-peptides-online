@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, getProductImage } from '@/lib/utils';
 import { productsByBaseName } from '@/lib/products';
 import { useCart } from '@/hooks/useCart';
 import SizePills from './SizePills';
@@ -17,8 +17,8 @@ export default function ProductHero({ product }: { product: Product }) {
     <div className={styles.productHero}>
       <div className={styles.imageBox}>
         <Image
-          src="/images/logos/bottle-blank.png"
-          alt="Product bottle"
+          src={getProductImage(product.name)}
+          alt={product.name}
           width={320}
           height={360}
           className={styles.productImage}

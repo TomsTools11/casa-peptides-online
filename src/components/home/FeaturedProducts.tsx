@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { peptides } from '@/lib/products';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, getProductImage } from '@/lib/utils';
 import styles from './FeaturedProducts.module.css';
 
 function getUniqueProducts() {
@@ -33,7 +33,7 @@ export default function FeaturedProducts() {
           >
             <div className={styles.imageBox}>
               <Image
-                src="/images/logos/bottle-blank.png"
+                src={getProductImage(product.name)}
                 alt={product.name}
                 width={120}
                 height={140}
