@@ -17,6 +17,9 @@ export default function ProductCard({ product }: { product: Product }) {
       onClick={() => router.push(`/store/${product.cat}`)}
     >
       <div className={styles.imageBox}>
+        <span className={product.inStock ? styles.statusBadgeInStock : styles.statusBadgeComingSoon}>
+          {product.inStock ? '🟢 In Stock' : '🟠 Coming Soon'}
+        </span>
         <Image
           src={getProductImage(product.name)}
           alt={product.name}
@@ -26,9 +29,6 @@ export default function ProductCard({ product }: { product: Product }) {
         />
       </div>
       <div className={styles.cardBody}>
-        <span className={product.inStock ? styles.statusBadgeInStock : styles.statusBadgeComingSoon}>
-          {product.inStock ? '🟢 In Stock' : '🟠 Coming Soon'}
-        </span>
         <div className={styles.cardName}>{product.name}</div>
         <div className={styles.cardCategory}>{product.category.toUpperCase()}</div>
         <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>
