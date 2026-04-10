@@ -4,29 +4,18 @@ import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import type { Product } from '@/lib/types';
 import { formatPrice } from '@/lib/utils';
-import { useCompare } from '@/hooks/useCompare';
+import { useCart } from '@/hooks/useCart';
 import styles from './ProductCard.module.css';
 
 export default function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
-  const { isInCompare, toggleCompare, isMaxed } = useCompare();
-
-  const checked = isInCompare(product.cat);
-  const disabled = !checked && isMaxed;
+  const { addToCart } = useCart();
 
   return (
     <div
-      className={`${styles.card} ${checked ? styles.compareSelected : ''}`}
-      onClick={() => router.push(`/catalog/product/${product.cat}`)}
+      className={styles.card}
+      onClick={() => router.push(`/store/${product.cat}`)}
     >
-      <label className={styles.compareCheckbox} onClick={e => e.stopPropagation()}>
-        <input
-          type="checkbox"
-          checked={checked}
-          disabled={disabled}
-          onChange={() => toggleCompare(product.cat)}
-        />
-      </label>
       <div className={styles.imageBox}>
         <Image
           src="/images/logos/bottle-blank.png"
@@ -40,6 +29,15 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className={styles.cardName}>{product.name}</div>
         <div className={styles.cardCategory}>{product.category.toUpperCase()}</div>
         <div className={styles.cardPrice}>{formatPrice(product.boxPrice)}</div>
+        <button
+          className={styles.addToCartBtn}
+          onClick={(e) => {
+            e.stopPropagation();
+            addToCart(product);
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

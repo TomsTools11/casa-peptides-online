@@ -1,4 +1,5 @@
 export function formatPrice(boxPrice: number): string {
+  if (boxPrice === 0) return 'TBD';
   const perVial = boxPrice / 10;
   return '$' + (Number.isInteger(perVial) ? perVial.toFixed(0) : perVial.toFixed(2));
 }

@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className={styles.footerColumn}>
           <h4 className={styles.columnHeading}>Resources</h4>
-          <Link href="/catalog" className={styles.footerLink}>Full Catalogue</Link>
+          <Link href="/store" className={styles.footerLink}>Store</Link>
           <Link href="/blog" className={styles.footerLink}>Research Articles</Link>
           <span className={styles.footerText}>COA Documentation</span>
         </div>

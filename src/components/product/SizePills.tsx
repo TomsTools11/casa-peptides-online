@@ -13,7 +13,7 @@ export default function SizePills({ variants, currentCat }: SizePillsProps) {
       {variants.map(v => (
         <Link
           key={v.cat}
-          href={`/catalog/product/${v.cat}`}
+          href={`/store/${v.cat}`}
           className={`${styles.sizePill} ${v.cat === currentCat ? styles.active : ''}`}
         >
           {v.size}

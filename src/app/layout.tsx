@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Epilogue, Inter } from 'next/font/google';
 import Script from 'next/script';
-import CompareProvider from '@/components/providers/CompareProvider';
+import CartProvider from '@/components/providers/CartProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import CompareBar from '@/components/compare/CompareBar';
+import CartDrawer from '@/components/cart/CartDrawer';
 import HashRedirect from '@/components/HashRedirect';
 import PlausibleAnalytics from '@/components/PlausibleAnalytics';
 import './globals.css';
@@ -25,7 +25,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Casa Peptides — Advanced Research Compounds',
-  description: 'Precision peptides and research compounds for scientific study. Browse the complete Casa Peptides catalog.',
+  description: 'Precision peptides and research compounds for scientific study. Browse the Casa Peptides store.',
   icons: {
     icon: '/images/logos/favicon.png',
     apple: '/images/logos/favicon.png',
@@ -41,13 +41,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://t.contentsquare.net/uxa/ce9d3083e4f5e.js"
           strategy="afterInteractive"
         />
-        <CompareProvider>
+        <CartProvider>
           <HashRedirect />
           <Header />
           {children}
           <Footer />
-          <CompareBar />
-        </CompareProvider>
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
