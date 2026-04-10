@@ -1,6 +1,6 @@
-# Casa Peptides Online
+# Casa Labs Online
 
-A modern, responsive product catalog for Casa Peptides — rebuilt from the ground up with Next.js and the App Router. Browse 127 research peptide products across 22+ categories with instant search, advanced filtering, side-by-side comparison, and full light/dark theme support.
+A modern, responsive product catalog for Casa Labs — rebuilt from the ground up with Next.js and the App Router. Browse 127 research peptide products across 22+ categories with instant search, advanced filtering, side-by-side comparison, and full light/dark theme support.
 
 **Live site:** [casa-peptides-catalogue.vercel.app](https://casa-peptides-catalogue.vercel.app)
 
