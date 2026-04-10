@@ -11,17 +11,11 @@ export default function HashRedirect() {
     if (!hash || !hash.startsWith('#/')) return;
 
     const path = hash.replace('#/', '/');
-    // Map old hash routes to new paths
-    if (path.startsWith('/catalog') || path === '/') {
-      router.replace('/catalog');
+    if (path.startsWith('/catalog') || path.startsWith('/store') || path === '/') {
+      router.replace('/store');
     } else if (path.startsWith('/product/')) {
       const cat = path.replace('/product/', '');
-      router.replace(`/catalog/product/${cat}`);
-    } else if (path.startsWith('/category/')) {
-      const category = path.replace('/category/', '');
-      router.replace(`/catalog/${category}`);
-    } else if (path.startsWith('/compare')) {
-      router.replace('/compare');
+      router.replace(`/store/${cat}`);
     }
   }, [router]);
 

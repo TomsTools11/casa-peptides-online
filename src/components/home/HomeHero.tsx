@@ -16,8 +16,8 @@ export default function HomeHero() {
           longitudinal studies.
         </p>
         <div className={styles.ctaRow}>
-          <Link href="/catalog" className={styles.cta}>
-            Explore Catalog
+          <Link href="/store" className={styles.cta}>
+            Browse Store
           </Link>
         </div>
       </div>

@@ -4,33 +4,31 @@ import { peptides } from '@/lib/products';
 import { formatPrice } from '@/lib/utils';
 import styles from './FeaturedProducts.module.css';
 
-const featuredNames = ['Semaglutide', 'Tirzepatide', 'BPC-157', 'NAD+'];
-
-function getFeatured() {
+function getUniqueProducts() {
   const seen = new Set<string>();
   return peptides.filter(p => {
-    if (featuredNames.includes(p.name) && !seen.has(p.name)) {
+    if (!seen.has(p.name)) {
       seen.add(p.name);
       return true;
     }
     return false;
-  }).slice(0, 4);
+  });
 }
 
 export default function FeaturedProducts() {
-  const featured = getFeatured();
+  const products = getUniqueProducts();
 
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <span className={styles.label}>Current Featured Inventory</span>
-        <h2 className={styles.heading}>Primary Research Assets</h2>
+        <span className={styles.label}>Available Now</span>
+        <h2 className={styles.heading}>Our Products</h2>
       </div>
       <div className={styles.grid}>
-        {featured.map(product => (
+        {products.map(product => (
           <Link
             key={product.cat}
-            href={`/catalog/product/${product.cat}`}
+            href={`/store/${product.cat}`}
             className={styles.card}
           >
             <div className={styles.imageBox}>
@@ -50,7 +48,7 @@ export default function FeaturedProducts() {
               <p className={styles.productMeta}>
                 {product.size} &middot; {product.category}
               </p>
-              <span className={styles.addBtn}>Add to Research</span>
+              <span className={styles.addBtn}>View Product</span>
             </div>
           </Link>
         ))}

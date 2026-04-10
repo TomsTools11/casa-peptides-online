@@ -12,14 +12,21 @@
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
-.card:hover .compareCheckbox {
-  opacity: 1;
+.addToCartBtn {
+  margin-top: 0.5rem;
+  padding: 0.45rem 1.2rem;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast);
 }
-.compareSelected {
-  box-shadow: 0 0 0 2px var(--color-accent);
-}
-.compareSelected .compareCheckbox {
-  opacity: 1;
+.addToCartBtn:hover {
+  background: var(--color-accent-hover);
 }
 .imageBox {
   background: #E8E4DF;
@@ -62,22 +69,4 @@
   font-size: 1.05rem;
   color: var(--color-accent);
   margin-top: 0.25rem;
-}
-.compareCheckbox {
-  position: absolute;
-  top: 0.65rem;
-  right: 0.65rem;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-}
-.compareCheckbox input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--color-accent);
-  cursor: pointer;
-}
-.compareCheckbox input[type="checkbox"]:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }

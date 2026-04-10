@@ -3,15 +3,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
-import { formatPrice, slugifyCategory } from '@/lib/utils';
+import { formatPrice } from '@/lib/utils';
 import { productsByBaseName } from '@/lib/products';
-import { useCompare } from '@/hooks/useCompare';
+import { useCart } from '@/hooks/useCart';
 import SizePills from './SizePills';
 import styles from './ProductHero.module.css';
 
 export default function ProductHero({ product }: { product: Product }) {
-  const { isInCompare, toggleCompare } = useCompare();
-  const inCompare = isInCompare(product.cat);
+  const { addToCart } = useCart();
   const variants = productsByBaseName[product.name] || [];
 
   return (
@@ -37,7 +36,7 @@ export default function ProductHero({ product }: { product: Product }) {
 
         <div className={styles.priceMain}>{formatPrice(product.boxPrice)}</div>
         <div className={styles.shippingNote}>
-          <Link href={`/catalog/${slugifyCategory(product.category)}`} className={styles.categoryLink}>
+          <Link href="/store" className={styles.categoryLink}>
             {product.category}
           </Link>
           {' · '}Shipping calculated at checkout.
@@ -49,19 +48,10 @@ export default function ProductHero({ product }: { product: Product }) {
 
         <button
           className={styles.btnBuyNow}
-          onClick={() => toggleCompare(product.cat)}
+          onClick={() => addToCart(product)}
         >
-          {inCompare ? 'Added to Compare' : 'Buy now'}
+          Add to Cart
         </button>
-
-        {!inCompare && (
-          <button
-            className={styles.btnCompareLink}
-            onClick={() => toggleCompare(product.cat)}
-          >
-            + Add to Compare
-          </button>
-        )}
       </div>
     </div>
   );

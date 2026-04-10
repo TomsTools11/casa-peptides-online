@@ -101,7 +101,7 @@ export default function ProductTabs({ product }: { product: Product }) {
             {variants.map(v => (
               <Link
                 key={v.cat}
-                href={`/catalog/product/${v.cat}`}
+                href={`/store/${v.cat}`}
                 className={`${styles.variantCard} ${v.cat === product.cat ? styles.variantCardCurrent : ''}`}
               >
                 <div className={styles.variantSize}>{v.size}</div>
